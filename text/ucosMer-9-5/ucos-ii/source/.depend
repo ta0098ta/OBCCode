@@ -1,0 +1,66 @@
+os_core.o: os_core.c \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ucosMer-6.0/app/app_cfg.h \
+ /home/DKC/ucos/ucosMer-6.0/app/os_cfg.h \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/core603e/os_cpu.h
+os_flag.o: os_flag.c \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ucosMer-6.0/app/app_cfg.h \
+ /home/DKC/ucos/ucosMer-6.0/app/os_cfg.h \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/core603e/os_cpu.h
+os_mem.o: os_mem.c /home/DKC/ucos/ucosMer-6.0/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ucosMer-6.0/app/app_cfg.h \
+ /home/DKC/ucos/ucosMer-6.0/app/os_cfg.h \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/core603e/os_cpu.h
+os_q.o: os_q.c /home/DKC/ucos/ucosMer-6.0/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ucosMer-6.0/app/app_cfg.h \
+ /home/DKC/ucos/ucosMer-6.0/app/os_cfg.h \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/core603e/os_cpu.h
+os_task.o: os_task.c \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ucosMer-6.0/app/app_cfg.h \
+ /home/DKC/ucos/ucosMer-6.0/app/os_cfg.h \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/core603e/os_cpu.h
+os_tmr.o: os_tmr.c /home/DKC/ucos/ucosMer-6.0/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ucosMer-6.0/app/app_cfg.h \
+ /home/DKC/ucos/ucosMer-6.0/app/os_cfg.h \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/core603e/os_cpu.h
+os_dbg_r.o: os_dbg_r.c \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ucosMer-6.0/app/app_cfg.h \
+ /home/DKC/ucos/ucosMer-6.0/app/os_cfg.h \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/core603e/os_cpu.h
+os_mbox.o: os_mbox.c \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ucosMer-6.0/app/app_cfg.h \
+ /home/DKC/ucos/ucosMer-6.0/app/os_cfg.h \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/core603e/os_cpu.h
+os_mutex.o: os_mutex.c \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ucosMer-6.0/app/app_cfg.h \
+ /home/DKC/ucos/ucosMer-6.0/app/os_cfg.h \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/core603e/os_cpu.h
+os_sem.o: os_sem.c /home/DKC/ucos/ucosMer-6.0/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ucosMer-6.0/app/app_cfg.h \
+ /home/DKC/ucos/ucosMer-6.0/app/os_cfg.h \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/core603e/os_cpu.h
+os_time.o: os_time.c \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ucosMer-6.0/app/app_cfg.h \
+ /home/DKC/ucos/ucosMer-6.0/app/os_cfg.h \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/core603e/os_cpu.h
+ucos_ii.o: ucos_ii.c \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ucosMer-6.0/app/app_cfg.h \
+ /home/DKC/ucos/ucosMer-6.0/app/os_cfg.h \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/core603e/os_cpu.h \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/source/os_core.c \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/source/os_flag.c \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/source/os_mbox.c \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/source/os_mem.c \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/source/os_mutex.c \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/source/os_q.c \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/source/os_sem.c \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/source/os_task.c \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/source/os_time.c \
+ /home/DKC/ucos/ucosMer-6.0/ucos-ii/source/os_tmr.c

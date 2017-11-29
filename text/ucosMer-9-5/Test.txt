@@ -1,0 +1,94 @@
+In file included from Includes.h:86,
+                 from main.c:12:
+hdlc.h:45: warning: `ACS' redefined
+can.h:99: warning: this is the location of the previous definition
+In file included from Includes.h:86,
+                 from testcode.c:3:
+hdlc.h:45: warning: `ACS' redefined
+can.h:99: warning: this is the location of the previous definition
+In file included from Includes.h:86,
+                 from interface.c:23:
+hdlc.h:45: warning: `ACS' redefined
+can.h:99: warning: this is the location of the previous definition
+In file included from Includes.h:86,
+                 from hdlc_handle.c:14:
+hdlc.h:45: warning: `ACS' redefined
+can.h:99: warning: this is the location of the previous definition
+In file included from Includes.h:86,
+                 from updownlink_uart_smc1.c:2:
+hdlc.h:45: warning: `ACS' redefined
+can.h:99: warning: this is the location of the previous definition
+In file included from Includes.h:86,
+                 from laser_senser.c:3:
+hdlc.h:45: warning: `ACS' redefined
+can.h:99: warning: this is the location of the previous definition
+In file included from Includes.h:86,
+                 from wod.c:18:
+hdlc.h:45: warning: `ACS' redefined
+can.h:99: warning: this is the location of the previous definition
+In file included from Includes.h:86,
+                 from ADCS.h:2,
+                 from ADCS.c:1:
+hdlc.h:45: warning: `ACS' redefined
+can.h:99: warning: this is the location of the previous definition
+In file included from Includes.h:86,
+                 from DLL_MIMU_RF.c:2:
+hdlc.h:45: warning: `ACS' redefined
+can.h:99: warning: this is the location of the previous definition
+In file included from Includes.h:86,
+                 from gps.c:2:
+hdlc.h:45: warning: `ACS' redefined
+can.h:99: warning: this is the location of the previous definition
+In file included from Includes.h:86,
+                 from LockLS.c:18:
+hdlc.h:45: warning: `ACS' redefined
+can.h:99: warning: this is the location of the previous definition
+In file included from Includes.h:86,
+                 from ProgramContrl.c:2:
+hdlc.h:45: warning: `ACS' redefined
+can.h:99: warning: this is the location of the previous definition
+In file included from Includes.h:86,
+                 from Starsensor.c:2:
+hdlc.h:45: warning: `ACS' redefined
+can.h:99: warning: this is the location of the previous definition
+In file included from Includes.h:86,
+                 from TASK_Management.c:2:
+hdlc.h:45: warning: `ACS' redefined
+can.h:99: warning: this is the location of the previous definition
+In file included from Includes.h:86,
+                 from MEMSGyro.c:2:
+hdlc.h:45: warning: `ACS' redefined
+can.h:99: warning: this is the location of the previous definition
+In file included from Includes.h:86,
+                 from BDGPS.c:7:
+hdlc.h:45: warning: `ACS' redefined
+can.h:99: warning: this is the location of the previous definition
+In file included from Includes.h:86,
+                 from main.c:12:
+hdlc.h:45: warning: `ACS' redefined
+can.h:99: warning: this is the location of the previous definition
+main.c: In function `main':
+main.c:640: warning: passing arg 1 of `OSTaskCreate' from incompatible pointer type
+main.c:437: warning: return type of `main' is not `int'
+In file included from Includes.h:86,
+                 from hdlc_handle.c:14:
+hdlc.h:45: warning: `ACS' redefined
+can.h:99: warning: this is the location of the previous definition
+In file included from Includes.h:86,
+                 from ProgramContrl.c:2:
+hdlc.h:45: warning: `ACS' redefined
+can.h:99: warning: this is the location of the previous definition
+ProgramContrl.c: In function `ProgramControl':
+ProgramContrl.c:332: warning: assignment from incompatible pointer type
+ProgramContrl.c:482: warning: assignment from incompatible pointer type
+ProgramContrl.c: At top level:
+ProgramContrl.c:564: warning: type mismatch with previous implicit declaration
+ProgramContrl.c:331: warning: previous implicit declaration of `RS422_Data_Send'
+ProgramContrl.c:564: warning: `RS422_Data_Send' was previously implicitly declared to return `int'
+In file included from Includes.h:86,
+                 from BDGPS.c:7:
+hdlc.h:45: warning: `ACS' redefined
+can.h:99: warning: this is the location of the previous definition
+app/libapp.a(ProgramContrl.o): In function `ProgramControl':
+ProgramContrl.o(.text+0x350): undefined reference to `OSTimDly'
+make: *** [ppcboot] Error 1

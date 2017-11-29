@@ -1,0 +1,337 @@
+#
+# file: cpusetup.s
+#
+# PowerPC Startup - initialize BATs, PCI, cache
+# for UCOS-II
+#
+# Author: Ernie Price
+# eprice@bitwise.net
+#
+#########################################################################
+
+#include <ppc_asm.tmpl>
+
+        .text
+        .align  2
+
+        .global bsp_Start
+	.global int_disable
+	.global enable_int
+	.global SetDecrementer
+	.global readtimer32
+	.global readtime
+	.global  CPU_IntDis
+	.global  CPU_IntEn
+	.global ExtIntHandle
+	.global OSCtxSwHandle
+	.global MachineCheck
+	.global SystemManage
+	.global DecIntHan
+
+        .extern BAT_Enable
+        .extern InitSRs
+        .extern ClearBATs
+        .extern CpDstBg, CpDstEn, CpSrcBg       # from the linker command file
+        .extern Slim, Sbase                     # from the linker command file
+        .extern msrvalue
+        .extern main
+	.extern EIEIntr
+	.extern OSCtxSw
+
+        .macro  LA reg,symbol
+        lis     reg,%hiadj(symbol)
+        addi    reg,reg,%lo(symbol)
+        .endm
+                
+        .macro  LWI reg,symbol
+        lis     reg,%hiadj(symbol)
+        addi    reg,reg,%lo(symbol)
+        .endm
+
+	.equ ADDR, 0xff800100
+
+.if 0
+delay   macro
+        lis     r3, 1
+        mtctr   r3
+dly\@:
+        addi    r3,r3, 1
+        bdnz    dly\@
+        endm
+.endif  
+
+########################################################################
+#
+#       Enter here from cpuvecs.s
+#
+bsp_Start:
+	nop
+/*
+        #mfmsr   r3
+	xor 	r3,r3,r3
+        ori     r3,r3,0x9002            # enable machine check and external exceptions
+        mtmsr   r3                      # 
+	xor r3,r3,r3
+	ori r3, r3, 0x900
+	mtlr r3
+	blr
+	mtdec  r3
+	bl SetDecrementer
+tl:	bl tl
+	bl SetDecrementer
+tl2:	
+        #lis     11, ADDR@ha          # Get pointer to ready task TCB
+        #lwz     12, ADDR@l(11)
+	#mtspr 26,r12
+	#sync
+	#rfi
+*/
+# in ROM - clear all of RAM
+
+#        lis     r3, 0x200               # clear 32 Mb
+#        rlwinm  r3,r3,30,2,31           # shift right 2 bits
+#        mtctr   r3
+#        lis     r3, 0                   # r3 is zero
+#        addi    r4,r3,-4                # r4 is zero - 4
+#clx:
+#        stwu    r3,4(r4)
+#        bdnz    clx
+
+#
+#       Now move the C initialized data from ROM to RAM
+#
+
+	#note by HHTECH
+#        LA      r3, CpSrcBg             # Address of Data section in FLASH
+#        LA      r4, CpDstBg             # Address of Data Section in RAM
+#        LA      r5, CpDstEn             # End of Data Section in RAM
+#        subf    r5,r4,r5                # r5: # bytes to copy
+#        bl      LclMemcpy               # Copy Data section to RAM
+
+#ClearBSS:
+
+#
+#       Now clear the C uninitialized data area
+#
+
+# note by HHTECH
+#        LA      r3, Sbase               # r3: address
+#        LWI     r5, Ssize               # r5: size to be cleared
+#        li      r4, 0                   # fill value 
+#        bl      LclMemset               # CLear Bss area
+
+        #mfmsr   r3
+	xor	r3,r3,r3
+        #ori     r3,r3,0xb002            # enable machine check and external exceptions
+        ori     r3,r3,0x3002            # enable machine check and external exceptions
+	isync
+        mtmsr   r3                      # 
+	sync
+
+#if 0
+	lis r3,10
+	mtdec r3
+	blr
+#endif
+#
+#       Now setup the stack and the Diab (also EABI) small data areas
+#
+        lis     1, 0x10                # initial stack at 1 mB - only temp til OS starts
+
+	#mflr	r0
+	xor r0,r0,r0
+        addis   13,0,_SDA_BASE_@ha    # Initialize r13 to sdata base, load top 16 bits
+        addi    13,13,_SDA_BASE_@l    # (provided by linker).load bottom 16 bits
+        addis   2,0,_SDA2_BASE_@ha    # Initialize r2 to sdata2 base
+        addi    2,2,_SDA2_BASE_@l     # (provided by linker).
+
+        mfmsr   3
+        #stw     r3, msrvalue@sdax(r13)  # partial MSR value for task stack initialization
+        lis     11, msrvalue@ha          # Get pointer to ready task TCB
+        stw     3, msrvalue@l(11)
+
+
+#
+# Insert other initialization code here.
+#
+        bl      main
+        b       .                       # in case main() returns
+
+##############################################################
+int_disable:
+#if 0
+    	mfmsr       3                  # fetch MSR to reg x
+    	rlwinm      0,3,0,17,15       # reset EE bit
+    	mtmsr       0                  # turn off EE in MSR, if it was on
+    	xor         3,3,0            # isolate original EE bit
+#endif
+#if 10
+    mfmsr   r3
+    mfmsr   r5                              # Preparation for disabling interrupts (1)
+    andi.   r5,r5,0x7fff                    # Preparation for disabling interrupts : set EE (bit #16) to '0' (2)
+    mtmsr   r5                              # Disable interrupts
+#endif
+#if 0
+        xor r3,r3,r3
+        ori r3,r3,0x54
+        lis r4,0xa0
+        stw r3,0(r4)
+#endif
+#if 0
+        mfmsr   r3                     /* Disable interrupts */
+	mr 	r4,r3
+        li      r5,0
+        ori     r5,r5,0x8000
+        andc    r4,r4,r5
+        sync                            /* Some chip revs need this... */
+        mtmsr   r4
+#endif
+        sync
+    	blr
+
+/*    	blr*/
+enable_int:
+#if 0	
+    	mfmsr       0                  # get current MSR
+    	or          0,0,3            # merge in prior state
+    	mtmsr       0                  # put back in MSR
+#endif	
+	mtmsr   r3
+	sync
+    	blr
+
+SetDecrementer:
+	mtdec  r3
+	blr
+#if 0
+	mtspr 22,r3
+	nop
+	nop
+	nop 
+	nop
+	#blr
+	#rfi
+        mfspr   r15,22
+        #ori     r3,r3,0x9040            # enable machine check and external exceptions
+        #mtmsr   r3                      # 
+	#xor r12,r12,r12
+#endif
+	/*lis r15,0x22*/
+	#mfdec r15
+redo:
+        #mfspr   r15,22
+	mfdec r15
+	lis 11,0xa0
+	stw r15,0(11)
+	#mtspr 22,r3
+	b redo
+	blr
+readtime:
+	/*mfdec r3*/
+	#mfmsr r3
+	mfdec r3
+	blr
+readtimer32:
+    	mfspr   3, 268
+    	blr
+#$PAGE^L
+#*********************************************************************************************************
+#*                                      DISABLE/ENABLE INTERRUPTS
+#*
+#* Description : Disable/Enable interrupts by setting or clearing the global interrupt mask in the cpu
+#*               status register.
+#*
+#*                    void  CPU_IntDis (void)
+#*                           Set global interrupt mask bit on MSR
+#*                           Return
+#*
+#*                    void  CPU_IntEn (void)
+#*                           Clear global interrupt mask bit on MSR
+#*                           Return
+#*********************************************************************************************************
+
+CPU_IntDis:
+    mfmsr   r5                              # Preparation for disabling interrupts (1)
+    andi.   r5,r5,0x7fff                    # Preparation for disabling interrupts : set EE (bit #16) to '0' (2)
+    mtmsr   r5                              # Disable interrupts
+    sync
+    blr
+
+
+CPU_IntEn:
+    mfmsr   r5                              # Preparation for enabling interrupts (1)
+    ori     r5,r5,0xb002                    # Preparation for enabling interrupts : set EE (bit #16) to '1'(2)
+    mtmsr   r5                              # Enable interrupts
+    sync
+    blr
+
+. = 0x200
+MachineCheck:
+        xor r3,r3,r3
+        #ori r3,r3,0x51
+        lis r4,0xf001
+        lwz r3,0x0c04(r4)
+	xor r4,r4,r4
+	lis r4,0x50
+	stw r3,0(r4)
+	rfi
+
+. = 0x500
+ExtIntHandle:
+        #xor r12,r12,r12
+        #ori r12,r12,0x52
+        #lis r11,0xc0
+        #stw r12,0(r11)
+
+	lis	r3,EIEIntr@ha
+        #lwz     r3,GOT(EIEIntr)
+	ori	r3,r3,EIEIntr@l
+        mtlr    r3
+        blrl
+
+. = 0x800
+SystemManage:
+        xor r3,r3,r3
+        ori r3,r3,0x53
+        lis r4,0x50
+        stw r3,0(r4)
+	rfi
+
+. = 0x900
+DecIntHan:
+        xor r3,r3,r3
+        ori r3,r3,0x56
+        lis r4,0x50
+        stw r3,0(r4)
+	rfi
+
+. = 0xC00
+OSCtxSwHandle:
+        #xor r3,r3,r3
+        #ori r3,r3,0x55
+        #lis r4,0xa0
+	#lwz r3,0(r4)
+	#ori r3,r3,1
+        #stw r3,0(r4)
+	#rfi
+	bl	OSCtxSw
+
+	#lis	r3,OSCtxSw@ha
+	#ori	r3,r3,OSCtxSw@l
+        #mtlr    r3
+        #blrl
+
+
+#if 0
+EIEIntr:
+        xor r12,r12,r12
+        ori r12,r12,0x55
+        lis r11,0xa0
+        #lwz r12,0(r11)
+        #ori r12,r12,1
+        #lis r11,0xa0
+        stw r12,0(r11)
+	rfi
+#endif
+        .end 
+ 
