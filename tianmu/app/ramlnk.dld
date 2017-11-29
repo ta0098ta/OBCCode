@@ -1,0 +1,53 @@
+/* 
+ * file: ramlnk.dld
+ *
+ * Author: Ernie price
+ * eprice@bitwise.net
+ *
+ */
+
+MEMORY
+{
+	ram:	org = 0x000000, len = 0x2000000
+}
+
+SECTIONS
+{
+	/*
+	 * The first GROUP contains code and constant data.
+	 */
+
+	GROUP : {
+
+		.text (TEXT)	: {
+			*(.text)
+			*(.rdata)
+			*(.rodata)
+			*(.frame_info)
+			*(.init)
+			*(.fini)
+		}
+		__ETEXT = .;
+
+		.sdata2 (DATA)	: {}   /* small CONST area */
+		.CpSrcBg: {}
+	} > ram
+
+	GROUP : {
+		.CpDstBg: {}
+		.data (DATA)	: {}
+
+		.sdata (DATA)	: { *(.sdata) }
+		.CpDstEn: {}
+
+		.sbss (BSS)	: {}
+		.bss  (BSS)	: {}
+
+	} > ram
+}
+
+CpDstBg = ADDR (.CpDstBg);
+CpDstEn = ADDR (.CpDstEn);
+CpSrcBg = ADDR (.CpSrcBg);
+Sbase	= ADDR(.sbss);
+Ssize	= SIZEOF(.sbss) + SIZEOF(.bss);

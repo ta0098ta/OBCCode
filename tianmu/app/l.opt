@@ -1,0 +1,3 @@
+-Ws -tPPCEN:simple -Xsupress-dot -Xreloc-bug -m2 
+-L c:/isippc/diab/4.2b/ppces -lc
+

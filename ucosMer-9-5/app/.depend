@@ -1,0 +1,266 @@
+main.o: main.c /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/includes.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu_def.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/app_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/os_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/core603e/os_cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/bsp.h Includes.h can.h \
+ hdlc.h /LinuxPPC/CDK/include/math.h /LinuxPPC/CDK/include/features.h \
+ /LinuxPPC/CDK/include/sys/cdefs.h /LinuxPPC/CDK/include/gnu/stubs.h \
+ /LinuxPPC/CDK/include/bits/huge_val.h \
+ /LinuxPPC/CDK/include/bits/mathdef.h \
+ /LinuxPPC/CDK/include/bits/mathcalls.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/float.h \
+ /LinuxPPC/CDK/include/stdlib.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stddef.h \
+ /LinuxPPC/CDK/include/sys/types.h /LinuxPPC/CDK/include/bits/types.h \
+ /LinuxPPC/CDK/include/time.h /LinuxPPC/CDK/include/endian.h \
+ /LinuxPPC/CDK/include/bits/endian.h \
+ /LinuxPPC/CDK/include/sys/select.h \
+ /LinuxPPC/CDK/include/bits/select.h \
+ /LinuxPPC/CDK/include/bits/sigset.h \
+ /LinuxPPC/CDK/include/sys/sysmacros.h /LinuxPPC/CDK/include/alloca.h
+interface.o: interface.c \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/includes.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu_def.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/app_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/os_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/core603e/os_cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/bsp.h Includes.h can.h \
+ hdlc.h
+hdlc_handle.o: hdlc_handle.c \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/includes.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu_def.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/app_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/os_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/core603e/os_cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/bsp.h Includes.h can.h \
+ hdlc.h /LinuxPPC/CDK/include/stdlib.h \
+ /LinuxPPC/CDK/include/features.h /LinuxPPC/CDK/include/sys/cdefs.h \
+ /LinuxPPC/CDK/include/gnu/stubs.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stddef.h \
+ /LinuxPPC/CDK/include/sys/types.h /LinuxPPC/CDK/include/bits/types.h \
+ /LinuxPPC/CDK/include/time.h /LinuxPPC/CDK/include/endian.h \
+ /LinuxPPC/CDK/include/bits/endian.h \
+ /LinuxPPC/CDK/include/sys/select.h \
+ /LinuxPPC/CDK/include/bits/select.h \
+ /LinuxPPC/CDK/include/bits/sigset.h \
+ /LinuxPPC/CDK/include/sys/sysmacros.h /LinuxPPC/CDK/include/alloca.h \
+ /LinuxPPC/CDK/include/stdio.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stdarg.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/va-ppc.h \
+ /LinuxPPC/CDK/include/libio.h /LinuxPPC/CDK/include/_G_config.h \
+ /LinuxPPC/CDK/include/bits/stdio_lim.h /LinuxPPC/CDK/include/string.h
+wod.o: wod.c /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/includes.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu_def.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/app_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/os_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/core603e/os_cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/bsp.h Includes.h can.h \
+ hdlc.h /LinuxPPC/CDK/include/stdlib.h \
+ /LinuxPPC/CDK/include/features.h /LinuxPPC/CDK/include/sys/cdefs.h \
+ /LinuxPPC/CDK/include/gnu/stubs.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stddef.h \
+ /LinuxPPC/CDK/include/sys/types.h /LinuxPPC/CDK/include/bits/types.h \
+ /LinuxPPC/CDK/include/time.h /LinuxPPC/CDK/include/endian.h \
+ /LinuxPPC/CDK/include/bits/endian.h \
+ /LinuxPPC/CDK/include/sys/select.h \
+ /LinuxPPC/CDK/include/bits/select.h \
+ /LinuxPPC/CDK/include/bits/sigset.h \
+ /LinuxPPC/CDK/include/sys/sysmacros.h /LinuxPPC/CDK/include/alloca.h \
+ /LinuxPPC/CDK/include/stdio.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stdarg.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/va-ppc.h \
+ /LinuxPPC/CDK/include/libio.h /LinuxPPC/CDK/include/_G_config.h \
+ /LinuxPPC/CDK/include/bits/stdio_lim.h /LinuxPPC/CDK/include/string.h \
+ /LinuxPPC/CDK/include/malloc.h
+ADCS.o: ADCS.c ADCS.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/includes.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu_def.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/app_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/os_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/core603e/os_cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/bsp.h Includes.h can.h \
+ hdlc.h /LinuxPPC/CDK/include/stdlib.h \
+ /LinuxPPC/CDK/include/features.h /LinuxPPC/CDK/include/sys/cdefs.h \
+ /LinuxPPC/CDK/include/gnu/stubs.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stddef.h \
+ /LinuxPPC/CDK/include/sys/types.h /LinuxPPC/CDK/include/bits/types.h \
+ /LinuxPPC/CDK/include/time.h /LinuxPPC/CDK/include/endian.h \
+ /LinuxPPC/CDK/include/bits/endian.h \
+ /LinuxPPC/CDK/include/sys/select.h \
+ /LinuxPPC/CDK/include/bits/select.h \
+ /LinuxPPC/CDK/include/bits/sigset.h \
+ /LinuxPPC/CDK/include/sys/sysmacros.h /LinuxPPC/CDK/include/alloca.h \
+ /LinuxPPC/CDK/include/stdio.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stdarg.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/va-ppc.h \
+ /LinuxPPC/CDK/include/libio.h /LinuxPPC/CDK/include/_G_config.h \
+ /LinuxPPC/CDK/include/bits/stdio_lim.h /LinuxPPC/CDK/include/string.h \
+ ADCS_TTC.h /LinuxPPC/CDK/include/math.h \
+ /LinuxPPC/CDK/include/bits/huge_val.h \
+ /LinuxPPC/CDK/include/bits/mathdef.h \
+ /LinuxPPC/CDK/include/bits/mathcalls.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/float.h
+ADCS_TTC.o: ADCS_TTC.c ADCS_TTC.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/app_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/os_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/core603e/os_cpu.h \
+ /LinuxPPC/CDK/include/math.h /LinuxPPC/CDK/include/features.h \
+ /LinuxPPC/CDK/include/sys/cdefs.h /LinuxPPC/CDK/include/gnu/stubs.h \
+ /LinuxPPC/CDK/include/bits/huge_val.h \
+ /LinuxPPC/CDK/include/bits/mathdef.h \
+ /LinuxPPC/CDK/include/bits/mathcalls.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/float.h \
+ /LinuxPPC/CDK/include/string.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stddef.h
+DLL_MIMU_RF.o: DLL_MIMU_RF.c \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/includes.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu_def.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/app_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/os_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/core603e/os_cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/bsp.h Includes.h can.h \
+ hdlc.h
+gps.o: gps.c /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/includes.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu_def.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/app_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/os_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/core603e/os_cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/bsp.h Includes.h can.h \
+ hdlc.h /LinuxPPC/CDK/include/stdlib.h \
+ /LinuxPPC/CDK/include/features.h /LinuxPPC/CDK/include/sys/cdefs.h \
+ /LinuxPPC/CDK/include/gnu/stubs.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stddef.h \
+ /LinuxPPC/CDK/include/sys/types.h /LinuxPPC/CDK/include/bits/types.h \
+ /LinuxPPC/CDK/include/time.h /LinuxPPC/CDK/include/endian.h \
+ /LinuxPPC/CDK/include/bits/endian.h \
+ /LinuxPPC/CDK/include/sys/select.h \
+ /LinuxPPC/CDK/include/bits/select.h \
+ /LinuxPPC/CDK/include/bits/sigset.h \
+ /LinuxPPC/CDK/include/sys/sysmacros.h /LinuxPPC/CDK/include/alloca.h \
+ /LinuxPPC/CDK/include/stdio.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stdarg.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/va-ppc.h \
+ /LinuxPPC/CDK/include/libio.h /LinuxPPC/CDK/include/_G_config.h \
+ /LinuxPPC/CDK/include/bits/stdio_lim.h /LinuxPPC/CDK/include/string.h \
+ /LinuxPPC/CDK/include/malloc.h
+LockLS.o: LockLS.c \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/includes.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu_def.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/app_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/os_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/core603e/os_cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/bsp.h Includes.h can.h \
+ hdlc.h
+ProgramContrl.o: ProgramContrl.c \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/includes.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu_def.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/app_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/os_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/core603e/os_cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/bsp.h Includes.h can.h \
+ hdlc.h /LinuxPPC/CDK/include/stdlib.h \
+ /LinuxPPC/CDK/include/features.h /LinuxPPC/CDK/include/sys/cdefs.h \
+ /LinuxPPC/CDK/include/gnu/stubs.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stddef.h \
+ /LinuxPPC/CDK/include/sys/types.h /LinuxPPC/CDK/include/bits/types.h \
+ /LinuxPPC/CDK/include/time.h /LinuxPPC/CDK/include/endian.h \
+ /LinuxPPC/CDK/include/bits/endian.h \
+ /LinuxPPC/CDK/include/sys/select.h \
+ /LinuxPPC/CDK/include/bits/select.h \
+ /LinuxPPC/CDK/include/bits/sigset.h \
+ /LinuxPPC/CDK/include/sys/sysmacros.h /LinuxPPC/CDK/include/alloca.h
+Starsensor.o: Starsensor.c \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/includes.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu_def.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/app_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/os_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/core603e/os_cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/bsp.h Includes.h can.h \
+ hdlc.h /LinuxPPC/CDK/include/stdlib.h \
+ /LinuxPPC/CDK/include/features.h /LinuxPPC/CDK/include/sys/cdefs.h \
+ /LinuxPPC/CDK/include/gnu/stubs.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stddef.h \
+ /LinuxPPC/CDK/include/sys/types.h /LinuxPPC/CDK/include/bits/types.h \
+ /LinuxPPC/CDK/include/time.h /LinuxPPC/CDK/include/endian.h \
+ /LinuxPPC/CDK/include/bits/endian.h \
+ /LinuxPPC/CDK/include/sys/select.h \
+ /LinuxPPC/CDK/include/bits/select.h \
+ /LinuxPPC/CDK/include/bits/sigset.h \
+ /LinuxPPC/CDK/include/sys/sysmacros.h /LinuxPPC/CDK/include/alloca.h \
+ /LinuxPPC/CDK/include/stdio.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stdarg.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/va-ppc.h \
+ /LinuxPPC/CDK/include/libio.h /LinuxPPC/CDK/include/_G_config.h \
+ /LinuxPPC/CDK/include/bits/stdio_lim.h /LinuxPPC/CDK/include/string.h
+MEMSGyro.o: MEMSGyro.c \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/includes.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu_def.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/app_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/os_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/core603e/os_cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/bsp.h Includes.h can.h \
+ hdlc.h /LinuxPPC/CDK/include/stdlib.h \
+ /LinuxPPC/CDK/include/features.h /LinuxPPC/CDK/include/sys/cdefs.h \
+ /LinuxPPC/CDK/include/gnu/stubs.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stddef.h \
+ /LinuxPPC/CDK/include/sys/types.h /LinuxPPC/CDK/include/bits/types.h \
+ /LinuxPPC/CDK/include/time.h /LinuxPPC/CDK/include/endian.h \
+ /LinuxPPC/CDK/include/bits/endian.h \
+ /LinuxPPC/CDK/include/sys/select.h \
+ /LinuxPPC/CDK/include/bits/select.h \
+ /LinuxPPC/CDK/include/bits/sigset.h \
+ /LinuxPPC/CDK/include/sys/sysmacros.h /LinuxPPC/CDK/include/alloca.h \
+ /LinuxPPC/CDK/include/stdio.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stdarg.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/va-ppc.h \
+ /LinuxPPC/CDK/include/libio.h /LinuxPPC/CDK/include/_G_config.h \
+ /LinuxPPC/CDK/include/bits/stdio_lim.h /LinuxPPC/CDK/include/string.h
+BDGPS.o: BDGPS.c \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/includes.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu_def.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/app_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/os_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/core603e/os_cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/bsp.h Includes.h can.h \
+ hdlc.h /LinuxPPC/CDK/include/stdlib.h \
+ /LinuxPPC/CDK/include/features.h /LinuxPPC/CDK/include/sys/cdefs.h \
+ /LinuxPPC/CDK/include/gnu/stubs.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stddef.h \
+ /LinuxPPC/CDK/include/sys/types.h /LinuxPPC/CDK/include/bits/types.h \
+ /LinuxPPC/CDK/include/time.h /LinuxPPC/CDK/include/endian.h \
+ /LinuxPPC/CDK/include/bits/endian.h \
+ /LinuxPPC/CDK/include/sys/select.h \
+ /LinuxPPC/CDK/include/bits/select.h \
+ /LinuxPPC/CDK/include/bits/sigset.h \
+ /LinuxPPC/CDK/include/sys/sysmacros.h /LinuxPPC/CDK/include/alloca.h \
+ /LinuxPPC/CDK/include/stdio.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stdarg.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/va-ppc.h \
+ /LinuxPPC/CDK/include/libio.h /LinuxPPC/CDK/include/_G_config.h \
+ /LinuxPPC/CDK/include/bits/stdio_lim.h /LinuxPPC/CDK/include/string.h

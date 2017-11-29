@@ -1,0 +1,49 @@
+/* 
+ * file: romlnk.dld
+ *
+ * Author: Ernie price
+ * eprice@bitwise.net
+ *
+ */
+
+MEMORY
+{
+	rom:	o = 0xfff00000 l = 0x80000
+	ram:	o = 0x3000     l = 0x2000000 - 0x3000
+}
+
+SECTIONS
+{
+	GROUP : {
+
+		.text (TEXT)	: {
+			*(.text)
+			*(.rdata)
+			*(.rodata)
+			*(.frame_info)
+			*(.init)
+			*(.fini)
+		}
+		.sdata2 (TEXT)	: {}   /* small CONST area */
+		.CpSrcBg: {}
+	} > rom
+
+	GROUP : {
+		.CpDstBg: {}
+		.data LOAD (ADDR(.sdata2) + SIZEOF(.sdata2))	: {}
+
+		.sdata LOAD (ADDR(.sdata2) + SIZEOF(.sdata2) + SIZEOF(.data)): { *(.sdata) }
+
+		.CpDstEn: {}
+
+		.sbss 	: {}
+		.bss  	: {}
+
+	} > ram
+}
+
+CpDstBg = ADDR (.CpDstBg);
+CpDstEn = ADDR (.CpDstEn);
+CpSrcBg = ADDR (.CpSrcBg);
+Sbase	= ADDR(.sbss);
+Ssize	= SIZEOF(.sbss) + SIZEOF(.bss);

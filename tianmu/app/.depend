@@ -1,0 +1,65 @@
+main.o: main.c includes.h can.h link.h Includes.h \
+ /LinuxPPC/CDK/include/math.h /LinuxPPC/CDK/include/features.h \
+ /LinuxPPC/CDK/include/sys/cdefs.h /LinuxPPC/CDK/include/gnu/stubs.h \
+ /LinuxPPC/CDK/include/bits/huge_val.h \
+ /LinuxPPC/CDK/include/bits/mathdef.h \
+ /LinuxPPC/CDK/include/bits/mathcalls.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/float.h \
+ /LinuxPPC/CDK/include/stdlib.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stddef.h \
+ /LinuxPPC/CDK/include/sys/types.h /LinuxPPC/CDK/include/bits/types.h \
+ /LinuxPPC/CDK/include/time.h /LinuxPPC/CDK/include/endian.h \
+ /LinuxPPC/CDK/include/bits/endian.h \
+ /LinuxPPC/CDK/include/sys/select.h \
+ /LinuxPPC/CDK/include/bits/select.h \
+ /LinuxPPC/CDK/include/bits/sigset.h \
+ /LinuxPPC/CDK/include/sys/sysmacros.h /LinuxPPC/CDK/include/alloca.h
+interface.o: interface.c includes.h can.h link.h Includes.h
+hdlc_handle.o: hdlc_handle.c includes.h can.h link.h Includes.h \
+ /LinuxPPC/CDK/include/stdlib.h /LinuxPPC/CDK/include/features.h \
+ /LinuxPPC/CDK/include/sys/cdefs.h /LinuxPPC/CDK/include/gnu/stubs.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stddef.h \
+ /LinuxPPC/CDK/include/sys/types.h /LinuxPPC/CDK/include/bits/types.h \
+ /LinuxPPC/CDK/include/time.h /LinuxPPC/CDK/include/endian.h \
+ /LinuxPPC/CDK/include/bits/endian.h \
+ /LinuxPPC/CDK/include/sys/select.h \
+ /LinuxPPC/CDK/include/bits/select.h \
+ /LinuxPPC/CDK/include/bits/sigset.h \
+ /LinuxPPC/CDK/include/sys/sysmacros.h /LinuxPPC/CDK/include/alloca.h \
+ /LinuxPPC/CDK/include/stdio.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stdarg.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/va-ppc.h \
+ /LinuxPPC/CDK/include/libio.h /LinuxPPC/CDK/include/_G_config.h \
+ /LinuxPPC/CDK/include/bits/stdio_lim.h /LinuxPPC/CDK/include/string.h
+spi_handle.o: spi_handle.c includes.h can.h link.h Includes.h \
+ /LinuxPPC/CDK/include/stdlib.h /LinuxPPC/CDK/include/features.h \
+ /LinuxPPC/CDK/include/sys/cdefs.h /LinuxPPC/CDK/include/gnu/stubs.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stddef.h \
+ /LinuxPPC/CDK/include/sys/types.h /LinuxPPC/CDK/include/bits/types.h \
+ /LinuxPPC/CDK/include/time.h /LinuxPPC/CDK/include/endian.h \
+ /LinuxPPC/CDK/include/bits/endian.h \
+ /LinuxPPC/CDK/include/sys/select.h \
+ /LinuxPPC/CDK/include/bits/select.h \
+ /LinuxPPC/CDK/include/bits/sigset.h \
+ /LinuxPPC/CDK/include/sys/sysmacros.h /LinuxPPC/CDK/include/alloca.h \
+ /LinuxPPC/CDK/include/stdio.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stdarg.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/va-ppc.h \
+ /LinuxPPC/CDK/include/libio.h /LinuxPPC/CDK/include/_G_config.h \
+ /LinuxPPC/CDK/include/bits/stdio_lim.h /LinuxPPC/CDK/include/string.h
+link_handle.o: link_handle.c includes.h can.h link.h Includes.h \
+ /LinuxPPC/CDK/include/stdlib.h /LinuxPPC/CDK/include/features.h \
+ /LinuxPPC/CDK/include/sys/cdefs.h /LinuxPPC/CDK/include/gnu/stubs.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stddef.h \
+ /LinuxPPC/CDK/include/sys/types.h /LinuxPPC/CDK/include/bits/types.h \
+ /LinuxPPC/CDK/include/time.h /LinuxPPC/CDK/include/endian.h \
+ /LinuxPPC/CDK/include/bits/endian.h \
+ /LinuxPPC/CDK/include/sys/select.h \
+ /LinuxPPC/CDK/include/bits/select.h \
+ /LinuxPPC/CDK/include/bits/sigset.h \
+ /LinuxPPC/CDK/include/sys/sysmacros.h /LinuxPPC/CDK/include/alloca.h \
+ /LinuxPPC/CDK/include/stdio.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stdarg.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/va-ppc.h \
+ /LinuxPPC/CDK/include/libio.h /LinuxPPC/CDK/include/_G_config.h \
+ /LinuxPPC/CDK/include/bits/stdio_lim.h /LinuxPPC/CDK/include/string.h

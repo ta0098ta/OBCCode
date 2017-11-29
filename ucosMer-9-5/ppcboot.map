@@ -1,0 +1,1866 @@
+Archive member included       because of file (symbol)
+
+bsp/lib8260.a(epic.o)         bsp/cpusetup.o (BSP_ProcessorISR)
+ucos-ii/source/libucos.a(os_core.o)
+                              bsp/cpusetup.o (OSIntNesting)
+ucos-ii/source/libucos.a(os_flag.o)
+                              ucos-ii/source/libucos.a(os_core.o) (OS_FlagInit)
+ucos-ii/source/libucos.a(os_mem.o)
+                              ucos-ii/source/libucos.a(os_core.o) (OS_MemInit)
+ucos-ii/source/libucos.a(os_q.o)
+                              ucos-ii/source/libucos.a(os_core.o) (OS_QInit)
+ucos-ii/source/libucos.a(os_task.o)
+                              ucos-ii/source/libucos.a(os_core.o) (OSTaskCreateExt)
+ucos-ii/source/libucos.a(os_tmr.o)
+                              ucos-ii/source/libucos.a(os_core.o) (OSTmr_Init)
+ucos-ii/source/libucos.a(os_dbg_r.o)
+                              ucos-ii/source/libucos.a(os_core.o) (OSDebugInit)
+ucos-ii/source/libucos.a(os_sem.o)
+                              ucos-ii/source/libucos.a(os_tmr.o) (OSSemCreate)
+ucos-ii/source/libucos.a(os_time.o)
+                              ucos-ii/source/libucos.a(os_core.o) (OSTimeDly)
+ucos-ii/core603e/lib603e.a(os_cpu_c.o)
+                              ucos-ii/source/libucos.a(os_task.o) (OSTaskStkInit)
+app/libapp.a(main.o)          bsp/cpusetup.o (main)
+app/libapp.a(interface.o)     app/libapp.a(main.o) (DPRAM_IRQ)
+app/libapp.a(hdlc_handle.o)   app/libapp.a(main.o) (dispatch)
+app/libapp.a(wod.o)           app/libapp.a(main.o) (wod)
+app/libapp.a(ADCS.o)          app/libapp.a(main.o) (ADCS_Main)
+app/libapp.a(ADCS_TTC.o)      app/libapp.a(ADCS.o) (tcMWRPMy)
+app/libapp.a(DLL_MIMU_RF.o)   app/libapp.a(main.o) (DLL_Main)
+app/libapp.a(gps.o)           app/libapp.a(main.o) (gps_serial_scc3)
+app/libapp.a(LockLS.o)        app/libapp.a(main.o) (Lock)
+app/libapp.a(ProgramContrl.o)
+                              app/libapp.a(main.o) (ProgramControl)
+app/libapp.a(Starsensor.o)    app/libapp.a(main.o) (StarSensorTask)
+app/libapp.a(MEMSGyro.o)      app/libapp.a(main.o) (MEMSGyro_Main)
+app/libapp.a(BDGPS.o)         app/libapp.a(main.o) (BDGPS_Main)
+bsp/lib8260.a(commproc.o)     app/libapp.a(main.o) (memset)
+bsp/lib8260.a(smc1.o)         app/libapp.a(main.o) (smc1_serial_init)
+bsp/lib8260.a(smc2.o)         app/libapp.a(main.o) (smc2_serial_init)
+bsp/lib8260.a(serial_scc.o)   app/libapp.a(main.o) (serial_init)
+bsp/lib8260.a(scc4.o)         app/libapp.a(main.o) (scc4_serial_init)
+bsp/lib8260.a(scc3.o)         app/libapp.a(main.o) (scc3_serial_init)
+bsp/lib8260.a(scc2.o)         app/libapp.a(main.o) (scc2_serial_init)
+bsp/lib8260.a(hdlc.o)         app/libapp.a(hdlc_handle.o) (fcc1_rx_packets)
+bsp/lib8260.a(uart_print.o)   ucos-ii/core603e/lib603e.a(os_cpu_c.o) (printf)
+bsp/lib8260.a(vsprintf.o)     bsp/lib8260.a(uart_print.o) (vsprintf)
+ucos-ii/source/libucos.a(os_mbox.o)
+                              app/libapp.a(main.o) (OSMboxCreate)
+/home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(w_acos.o)
+                              app/libapp.a(ADCS.o) (acos)
+/home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(w_asin.o)
+                              app/libapp.a(ADCS.o) (asin)
+/home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(w_atan2.o)
+                              app/libapp.a(ADCS.o) (atan2)
+/home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(w_fmod.o)
+                              app/libapp.a(ADCS.o) (fmod)
+/home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(w_pow.o)
+                              app/libapp.a(ADCS.o) (pow)
+/home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(w_sqrt.o)
+                              app/libapp.a(ADCS.o) (sqrt)
+/home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_atan.o)
+                              app/libapp.a(ADCS.o) (atan)
+/home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_cos.o)
+                              app/libapp.a(ADCS.o) (cos)
+/home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_fabs.o)
+                              app/libapp.a(ADCS.o) (fabs)
+/home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_floor.o)
+                              app/libapp.a(ADCS.o) (floor)
+/home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_sin.o)
+                              app/libapp.a(ADCS.o) (sin)
+/home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(k_cos.o)
+                              /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_cos.o) (__kernel_cos)
+/home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(k_sin.o)
+                              /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_cos.o) (__kernel_sin)
+/home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_acos.o)
+                              /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(w_acos.o) (__ieee754_acos)
+/home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_asin.o)
+                              /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(w_asin.o) (__ieee754_asin)
+/home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_atan2.o)
+                              /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(w_atan2.o) (__ieee754_atan2)
+/home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_fmod.o)
+                              /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(w_fmod.o) (__ieee754_fmod)
+/home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_pow.o)
+                              /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(w_pow.o) (__ieee754_pow)
+/home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_rem_pio2.o)
+                              /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_cos.o) (__ieee754_rem_pio2)
+/home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_sqrt.o)
+                              /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(w_sqrt.o) (__ieee754_sqrt)
+/home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_scalbn.o)
+                              /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_pow.o) (scalbn)
+/home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(k_rem_pio2.o)
+                              /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_rem_pio2.o) (__kernel_rem_pio2)
+/home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_copysign.o)
+                              /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_scalbn.o) (copysign)
+/LinuxPPC/CDK/powerpc-linux/lib/gcc-lib/powerpc-linux/2.95.2//libgcc.a(dp-bit.o)
+                              app/libapp.a(hdlc_handle.o) (__adddf3)
+/LinuxPPC/CDK/powerpc-linux/lib/gcc-lib/powerpc-linux/2.95.2//libgcc.a(fp-bit.o)
+                              app/libapp.a(ADCS.o) (__divsf3)
+/LinuxPPC/CDK/powerpc-linux/lib/gcc-lib/powerpc-linux/2.95.2//libgcc.a(_lshrdi3.o)
+                              /LinuxPPC/CDK/powerpc-linux/lib/gcc-lib/powerpc-linux/2.95.2//libgcc.a(dp-bit.o) (__lshrdi3)
+
+Allocating common symbols
+Common symbol       size              file
+
+gps_seconds_ADCS    0x4               app/libapp.a(ADCS.o)
+RR_TIMEOUT          0x5               app/libapp.a(hdlc_handle.o)
+ad                  0x64              app/libapp.a(main.o)
+GG                  0x8               app/libapp.a(ADCS.o)
+tlmMWRPMyDr         0x2               app/libapp.a(ADCS_TTC.o)
+CMD_Adc_Ks1         0x4               app/libapp.a(ADCS.o)
+Task13              0x8000            app/libapp.a(main.o)
+OSTmrFreeList       0x4               ucos-ii/source/libucos.a(os_core.o)
+MW_RPMCmd16         0x2               app/libapp.a(ADCS.o)
+PCFlag              0x8               app/libapp.a(main.o)
+P_counter           0x4               app/libapp.a(ADCS.o)
+RxTxBD              0x4               bsp/lib8260.a(hdlc.o)
+utc                 0x4               app/libapp.a(ADCS.o)
+BSP_IPIC_Handlers   0x100             bsp/lib8260.a(epic.o)
+gps                 0x28              app/libapp.a(main.o)
+TlmSource           0x2               app/libapp.a(ADCS.o)
+OSTmrWheelTbl       0x40              ucos-ii/source/libucos.a(os_core.o)
+NoMMTlm             0x4               app/libapp.a(ADCS.o)
+tlmMCU2P12VMon      0x2               app/libapp.a(ADCS_TTC.o)
+CAN_Q_Rec_DLL       0x4               app/libapp.a(main.o)
+PC_UQ               0x4               app/libapp.a(main.o)
+CMD_Adc_Kdw         0x2               app/libapp.a(ADCS.o)
+ProConUart          0x28              app/libapp.a(main.o)
+PCFsecond           0x4               app/libapp.a(main.o)
+IMM                 0x4               bsp/lib8260.a(hdlc.o)
+gps_sign            0x4               app/libapp.a(ADCS.o)
+RPY_ST              0x18              app/libapp.a(ADCS.o)
+can_use_by_dll      0x1               app/libapp.a(main.o)
+Sun_i               0x18              app/libapp.a(ADCS.o)
+BfMM_Max            0x8               app/libapp.a(ADCS.o)
+W0                  0x8               app/libapp.a(ADCS.o)
+me                  0xc8              app/libapp.a(main.o)
+OSLockNesting       0x1               ucos-ii/source/libucos.a(os_core.o)
+CMD_Adc_Kp_1        0x4               app/libapp.a(ADCS.o)
+OSTmrSemSignal      0x4               ucos-ii/source/libucos.a(os_core.o)
+SK4                 0x48              app/libapp.a(ADCS.o)
+Q2                  0x18              app/libapp.a(ADCS.o)
+CMD_OCO_UPDATE      0x2               app/libapp.a(ADCS.o)
+OSRunning           0x1               ucos-ii/source/libucos.a(os_core.o)
+FCC3_RcvBufferPool  0x3840            bsp/lib8260.a(hdlc.o)
+MMCorrectZ          0x2               app/libapp.a(ADCS.o)
+tlmMCU2ASSNy        0x2               app/libapp.a(ADCS_TTC.o)
+pFifo_Rx0           0x4               bsp/lib8260.a(hdlc.o)
+obctozpflong        0x4               app/libapp.a(ADCS.o)
+ERR_SHARE_PRINTF    0x1               app/libapp.a(main.o)
+obctozpf4c          0x1               app/libapp.a(ADCS.o)
+rfs                 0x28              app/libapp.a(main.o)
+Wbo_ST              0x18              app/libapp.a(ADCS.o)
+Test1               0x18              app/libapp.a(ADCS.o)
+tlmMCU1MM1x         0x2               app/libapp.a(ADCS_TTC.o)
+CAN_Q_Rec           0x4               app/libapp.a(main.o)
+acsq                0x28              app/libapp.a(main.o)
+Control             0x2               app/libapp.a(ADCS.o)
+CMD_MWY_CONTROL_MODE
+                    0x2               app/libapp.a(ADCS.o)
+BDGPSbuf            0xa0              app/libapp.a(ProgramContrl.o)
+PCSsecond           0x4               app/libapp.a(main.o)
+timer               0x30              app/libapp.a(hdlc_handle.o)
+ZKC_Counter         0x4               app/libapp.a(ADCS.o)
+Task4               0x20000           app/libapp.a(main.o)
+CAN_Q_REC_TTC       0x4               app/libapp.a(main.o)
+DLL_HDLC_REC        0x4               app/libapp.a(main.o)
+OSIdleCtr           0x4               ucos-ii/source/libucos.a(os_core.o)
+dkc_package_confile
+                    0xf9              app/libapp.a(hdlc_handle.o)
+MW_RPS              0x8               app/libapp.a(ADCS.o)
+eis_transf_flag     0x2               app/libapp.a(main.o)
+tlmMCU2ASSPy        0x2               app/libapp.a(ADCS_TTC.o)
+OSTmrUsed           0x2               ucos-ii/source/libucos.a(os_core.o)
+CMD_LOG_ONOFF       0x2               app/libapp.a(ADCS.o)
+head_node           0x4               app/libapp.a(hdlc_handle.o)
+MW_temp             0x8               app/libapp.a(ADCS.o)
+PCFweek             0x2               app/libapp.a(main.o)
+P1                  0x80              app/libapp.a(ADCS.o)
+Mjd                 0x8               app/libapp.a(ADCS.o)
+MT_Ymax             0x8               app/libapp.a(ADCS.o)
+wod_begin           0x4               app/libapp.a(hdlc_handle.o)
+OSPrioHighRdy       0x1               ucos-ii/source/libucos.a(os_core.o)
+SJ_SS_Q             0x20              app/libapp.a(ADCS.o)
+GpsReady            0x1               app/libapp.a(main.o)
+J_MW                0x8               app/libapp.a(ADCS.o)
+tlmMWyAnri          0x2               app/libapp.a(ADCS_TTC.o)
+zpf                 0x28              app/libapp.a(main.o)
+Sb                  0x8               app/libapp.a(ADCS.o)
+CMD_Adc_W_step      0x2               app/libapp.a(ADCS.o)
+msrvalue            0x4               ucos-ii/core603e/lib603e.a(os_cpu_c.o)
+Period_             0x4               app/libapp.a(ADCS.o)
+MEMSGyroQ           0x4               app/libapp.a(main.o)
+mse                 0x28              app/libapp.a(main.o)
+PC_Cycle            0x4               app/libapp.a(main.o)
+tlmMCU2MT2IMon      0x2               app/libapp.a(ADCS_TTC.o)
+m_C                 0x1               app/libapp.a(ADCS_TTC.o)
+CMD_MTZ_PWM         0x1               app/libapp.a(ADCS.o)
+CMD_MCU2            0x1               app/libapp.a(ADCS.o)
+pFifo_Rx1           0x4               bsp/lib8260.a(hdlc.o)
+OSFlagTbl           0x230             ucos-ii/source/libucos.a(os_core.o)
+tlmMCU2P5VIMon      0x2               app/libapp.a(ADCS_TTC.o)
+tlmMCU2MM2x         0x2               app/libapp.a(ADCS_TTC.o)
+SR1                 0x18              app/libapp.a(ADCS.o)
+TaskManageQueue     0x4               app/libapp.a(main.o)
+CMD_MM_SEL          0x2               app/libapp.a(ADCS.o)
+K                   0xa8              app/libapp.a(ADCS.o)
+Task19              0x8000            app/libapp.a(main.o)
+Task15              0x8000            app/libapp.a(main.o)
+TTC_Flag            0x4               app/libapp.a(main.o)
+BfMM                0x20              app/libapp.a(ADCS.o)
+ADCS_FLAG           0x4               app/libapp.a(main.o)
+OSTmrTbl            0x340             ucos-ii/source/libucos.a(os_core.o)
+StarFlag            0x1               app/libapp.a(main.o)
+obctozpf6c          0x1               app/libapp.a(ADCS.o)
+ipic                0x4               bsp/lib8260.a(epic.o)
+CMD_Adc_Kd_1        0x4               app/libapp.a(ADCS.o)
+CMD_Adc_Kp_0        0x4               app/libapp.a(ADCS.o)
+CAN_Q_REC_EIS       0x4               app/libapp.a(main.o)
+SSP1                0x80              app/libapp.a(ADCS.o)
+hid0                0x4               bsp/lib8260.a(commproc.o)
+receivedDataArray0  0x28              bsp/lib8260.a(hdlc.o)
+q2                  0x4               app/libapp.a(hdlc_handle.o)
+CMD_MT_I_SAMPLE     0x2               app/libapp.a(ADCS.o)
+MW_RPM_Max          0x8               app/libapp.a(ADCS.o)
+dll_buf             0x28              app/libapp.a(main.o)
+OSPrioCur           0x1               ucos-ii/source/libucos.a(os_core.o)
+CMD_MT_CONTROL_MODE
+                    0x1               app/libapp.a(ADCS.o)
+Rate_prev           0x8               app/libapp.a(ADCS.o)
+ADCS_Err            0x1               app/libapp.a(ADCS.o)
+tlmMCU2MT1IMon      0x2               app/libapp.a(ADCS_TTC.o)
+timer_counter       0x4               app/libapp.a(main.o)
+cg                  0x14              app/libapp.a(main.o)
+Iz                  0x8               app/libapp.a(ADCS.o)
+OSTCBList           0x4               ucos-ii/source/libucos.a(os_core.o)
+tlmMCU2MTVref       0x2               app/libapp.a(ADCS_TTC.o)
+ACSFL_Flag          0x4               app/libapp.a(hdlc_handle.o)
+MW_RPMTlm16         0x2               app/libapp.a(ADCS.o)
+dBeta               0x8               app/libapp.a(ADCS.o)
+Pre_SRPY            0x18              app/libapp.a(ADCS.o)
+Task8               0x8000            app/libapp.a(main.o)
+Task20              0x8000            app/libapp.a(main.o)
+CMD_MWY_ON_OFF      0x2               app/libapp.a(ADCS.o)
+BDGPSQ              0x4               app/libapp.a(main.o)
+BfLO                0x20              app/libapp.a(ADCS.o)
+OSMemTbl            0xb4              ucos-ii/source/libucos.a(os_core.o)
+OSTickStepState     0x1               ucos-ii/source/libucos.a(os_core.o)
+tlmMCU1MT2IMon      0x2               app/libapp.a(ADCS_TTC.o)
+tlmMCU2MT3IMon      0x2               app/libapp.a(ADCS_TTC.o)
+CMD_Adc_TStep       0x4               app/libapp.a(ADCS.o)
+MW_RPM_Rating       0x8               app/libapp.a(ADCS.o)
+CMD_Adc_G1          0x4               app/libapp.a(ADCS.o)
+OSTaskStatStk       0x200             ucos-ii/source/libucos.a(os_core.o)
+MEMSGyroBuf         0x28              app/libapp.a(main.o)
+P2                  0x60              app/libapp.a(ADCS.o)
+CAN_Q_Rec_MIMU      0x4               app/libapp.a(main.o)
+MMCorrectY          0x2               app/libapp.a(ADCS.o)
+CMD_MWY_RPM_MAX     0x2               app/libapp.a(ADCS.o)
+m_U16Tmp            0x1               app/libapp.a(ADCS_TTC.o)
+OSCtxSwCtr          0x4               ucos-ii/source/libucos.a(os_core.o)
+ms                  0x28              app/libapp.a(main.o)
+RScc3Buf            0x12c             app/libapp.a(gps.o)
+Y                   0x10              app/libapp.a(ADCS.o)
+obctozpfdouble      0x8               app/libapp.a(ADCS.o)
+tlmMWyAnti          0x2               app/libapp.a(ADCS_TTC.o)
+can_use_by_mimu     0x1               app/libapp.a(main.o)
+scc3buf             0xa0              app/libapp.a(BDGPS.o)
+PCSweek             0x2               app/libapp.a(main.o)
+eis0                0xc8              app/libapp.a(main.o)
+HDLC_channel_select
+                    0x1               app/libapp.a(main.o)
+MT_PWMCmd16         0x6               app/libapp.a(ADCS.o)
+Task17              0x8000            app/libapp.a(main.o)
+PCNodeArray         0x7d0             app/libapp.a(hdlc_handle.o)
+tlmMCU2GYRO         0x2               app/libapp.a(ADCS_TTC.o)
+PCNodePointer       0x1               app/libapp.a(hdlc_handle.o)
+SK1                 0x60              app/libapp.a(ADCS.o)
+CMD_MTX_PWM         0x1               app/libapp.a(ADCS.o)
+wod_cycle           0x4               app/libapp.a(main.o)
+OSTmrFree           0x2               ucos-ii/source/libucos.a(os_core.o)
+Beta_prev           0x8               app/libapp.a(ADCS.o)
+BreakWodBegin       0x4               app/libapp.a(hdlc_handle.o)
+Period_Nom          0x2               app/libapp.a(ADCS.o)
+tlmMCU1MTVref       0x2               app/libapp.a(ADCS_TTC.o)
+Adc                 0x40              app/libapp.a(ADCS.o)
+OSIdleCtrMax        0x4               ucos-ii/source/libucos.a(os_core.o)
+tlmMCU1MT1IMon      0x2               app/libapp.a(ADCS_TTC.o)
+Task10              0x8000            app/libapp.a(main.o)
+tlmMCU1ASSTs        0x2               app/libapp.a(ADCS_TTC.o)
+tlmMCU1MMS          0x2               app/libapp.a(ADCS_TTC.o)
+seconds80_Prev      0x4               app/libapp.a(ADCS.o)
+C_pred              0x18              app/libapp.a(ADCS.o)
+V_ECI               0xc               app/libapp.a(ADCS.o)
+uart_down           0x64              app/libapp.a(main.o)
+MW_T_Max            0x8               app/libapp.a(ADCS.o)
+dll_hdlc            0x28              app/libapp.a(main.o)
+gps_getQ            0x4               app/libapp.a(main.o)
+Task12              0x8000            app/libapp.a(main.o)
+SS_OSQ              0x4               app/libapp.a(main.o)
+OSTCBFreeList       0x4               ucos-ii/source/libucos.a(os_core.o)
+CMD_Adc_Kd1         0x4               app/libapp.a(ADCS.o)
+CMD_MWX_RPM_MAX     0x2               app/libapp.a(ADCS.o)
+CMD_Adc_PitchMask   0x4               app/libapp.a(ADCS.o)
+tlmMCU1P5VMon       0x2               app/libapp.a(ADCS_TTC.o)
+SS                  0x20              app/libapp.a(ADCS.o)
+SX                  0x38              app/libapp.a(ADCS.o)
+BYLO                0x48              app/libapp.a(ADCS.o)
+tlmMCU2ASSPx        0x2               app/libapp.a(ADCS_TTC.o)
+FCC1_SndBufferPool  0x3840            bsp/lib8260.a(hdlc.o)
+tlmMCU2MM2Ts        0x2               app/libapp.a(ADCS_TTC.o)
+HdlcQEvent          0x4               app/libapp.a(main.o)
+Task9               0x8000            app/libapp.a(main.o)
+Hdlc_Flag           0x4               bsp/lib8260.a(hdlc.o)
+TEST2               0x18              app/libapp.a(ADCS.o)
+cang                0x28              app/libapp.a(main.o)
+Lock_Q_TTC          0x4               app/libapp.a(main.o)
+CMD_MTX_TIME        0x1               app/libapp.a(ADCS.o)
+dBeta2              0x8               app/libapp.a(ADCS.o)
+task_queue          0x28              app/libapp.a(main.o)
+obctozpf1           0x2               app/libapp.a(ADCS.o)
+Qbo_prev            0x20              app/libapp.a(ADCS.o)
+don                 0x64              app/libapp.a(main.o)
+tlmMCU1Vref         0x2               app/libapp.a(ADCS_TTC.o)
+EIS_data_down1      0xc8              app/libapp.a(hdlc_handle.o)
+CMD_PERIOD_NOM      0x2               app/libapp.a(ADCS.o)
+sendMsg             0x4               app/libapp.a(main.o)
+EquId               0x1               app/libapp.a(ProgramContrl.o)
+Task1               0x8000            app/libapp.a(main.o)
+can_buf             0x28              app/libapp.a(main.o)
+SRPY                0x18              app/libapp.a(ADCS.o)
+ZPF_FLAG            0x4               app/libapp.a(main.o)
+gps_week            0x2               app/libapp.a(main.o)
+SStemp              0x20              app/libapp.a(ADCS.o)
+CMD_Adc_Kd_0        0x4               app/libapp.a(ADCS.o)
+m_err               0x1               app/libapp.a(ADCS_TTC.o)
+CMD_MWZ_RPM_MAX     0x2               app/libapp.a(ADCS.o)
+ADCS_HDLC_REC       0x4               app/libapp.a(main.o)
+MW_statusY          0x4               app/libapp.a(ADCS.o)
+P0                  0x30              app/libapp.a(ADCS.o)
+EIS1_photographQ    0x4               app/libapp.a(main.o)
+tlmMCU1ASSNx        0x2               app/libapp.a(ADCS_TTC.o)
+Filter              0x2               app/libapp.a(ADCS.o)
+adcsbuf1            0x514             app/libapp.a(hdlc_handle.o)
+RFS_HDLC_REC        0x4               app/libapp.a(main.o)
+gps_weeks_ADCS      0x4               app/libapp.a(ADCS.o)
+bd_1                0x30              bsp/lib8260.a(hdlc.o)
+tr                  0xc8              app/libapp.a(main.o)
+CMD_PITCH_REF       0x2               app/libapp.a(ADCS.o)
+ACSGD_Flag          0x4               app/libapp.a(hdlc_handle.o)
+CAN_Q_REC_GPS       0x4               app/libapp.a(main.o)
+dMW_RPS             0x8               app/libapp.a(ADCS.o)
+data_got            0x14              app/libapp.a(ADCS.o)
+rf_can              0x28              app/libapp.a(main.o)
+OSCPUUsage          0x1               ucos-ii/source/libucos.a(os_core.o)
+MM_Tlm16            0x18              app/libapp.a(ADCS.o)
+R1                  0x18              app/libapp.a(ADCS.o)
+PC_Q                0x4               app/libapp.a(main.o)
+RS422_Q_Rec         0x4               app/libapp.a(main.o)
+lo                  0x14              app/libapp.a(main.o)
+tlmMWyAnt           0x2               app/libapp.a(ADCS_TTC.o)
+WorkMode            0x2               app/libapp.a(ADCS.o)
+ct                  0x14              app/libapp.a(main.o)
+SHARE_PRINTF        0x4               app/libapp.a(main.o)
+OSTaskStarting      0x1               app/libapp.a(main.o)
+MT_Cmd              0x18              app/libapp.a(ADCS.o)
+SHARE_SENDDOWN      0x4               app/libapp.a(main.o)
+tlmMCU2MM2z         0x2               app/libapp.a(ADCS_TTC.o)
+ptr_gd              0x4               bsp/lib8260.a(epic.o)
+OSTaskCtr           0x1               ucos-ii/source/libucos.a(os_core.o)
+stars               0x28              app/libapp.a(main.o)
+SEND_TIMEOUT        0x1               app/libapp.a(main.o)
+WScc3Buf            0x12c             app/libapp.a(gps.o)
+CMD_MWY_PERIOD      0x2               app/libapp.a(ADCS.o)
+Eph                 0xb0              app/libapp.a(ADCS.o)
+q3                  0x4               app/libapp.a(hdlc_handle.o)
+RecMsg              0x4               app/libapp.a(main.o)
+obctozpf3           0x2               app/libapp.a(ADCS.o)
+ProCon              0x28              app/libapp.a(main.o)
+CMD_Adc_Kpw         0x2               app/libapp.a(ADCS.o)
+receivedDataArray1  0x28              bsp/lib8260.a(hdlc.o)
+R_ECEF              0xc               app/libapp.a(ADCS.o)
+TEST3               0x18              app/libapp.a(ADCS.o)
+q1                  0x4               app/libapp.a(hdlc_handle.o)
+MW_RPS_Prev         0x8               app/libapp.a(ADCS.o)
+ce                  0x14              app/libapp.a(main.o)
+gb                  0x2               app/libapp.a(main.o)
+tlmMCU2ASSNx        0x2               app/libapp.a(ADCS_TTC.o)
+MW_RPS_Rating       0x8               app/libapp.a(ADCS.o)
+OSMemFreeList       0x4               ucos-ii/source/libucos.a(os_core.o)
+BfLO_prev           0x20              app/libapp.a(ADCS.o)
+sendQEvent          0x4               app/libapp.a(main.o)
+sbuf                0x1c              app/libapp.a(main.o)
+FCC3_SndBufferPool  0x3840            bsp/lib8260.a(hdlc.o)
+tlmMCU2P5VMon       0x2               app/libapp.a(ADCS_TTC.o)
+to                  0x28              app/libapp.a(main.o)
+O                   0x18              app/libapp.a(ADCS.o)
+Task18              0x8000            app/libapp.a(main.o)
+EIS0_photographQ    0x4               app/libapp.a(main.o)
+tlmMCU2MMSTs        0x2               app/libapp.a(ADCS_TTC.o)
+tlmMCU2P12VIMon     0x2               app/libapp.a(ADCS_TTC.o)
+MIMU_HDLC_REC       0x4               app/libapp.a(main.o)
+TESTK               0xc8              app/libapp.a(ADCS.o)
+tlmMCU1P5VIMon      0x2               app/libapp.a(ADCS_TTC.o)
+obctozpf3c          0x1               app/libapp.a(ADCS.o)
+can_buf2            0x28              app/libapp.a(main.o)
+Iy                  0x8               app/libapp.a(ADCS.o)
+OSQTbl              0x3c0             ucos-ii/source/libucos.a(os_core.o)
+obctozpf5c          0x1               app/libapp.a(ADCS.o)
+gps_second          0x4               app/libapp.a(main.o)
+OSTCBHighRdy        0x4               ucos-ii/source/libucos.a(os_core.o)
+ModGH               0x290             app/libapp.a(ADCS.o)
+rs422               0x64              app/libapp.a(main.o)
+tlmMCU2N12VIMon     0x2               app/libapp.a(ADCS_TTC.o)
+OSQFreeList         0x4               ucos-ii/source/libucos.a(os_core.o)
+SEND_STOP           0x1               app/libapp.a(main.o)
+Period_True         0x8               app/libapp.a(ADCS.o)
+MT_Zmax             0x8               app/libapp.a(ADCS.o)
+tlmMCU1ASSPx        0x2               app/libapp.a(ADCS_TTC.o)
+transeiver_receiveQ
+                    0x4               app/libapp.a(main.o)
+doubledummy         0x8               app/libapp.a(ADCS.o)
+Task5               0x20000           app/libapp.a(main.o)
+OSRdyGrp            0x1               ucos-ii/source/libucos.a(os_core.o)
+CAN_Q_Rec2          0x4               app/libapp.a(main.o)
+Filter_Sts          0x4               app/libapp.a(ADCS.o)
+laserM              0x28              app/libapp.a(main.o)
+SUN_V               0x20              app/libapp.a(ADCS.o)
+CAN_Q_GPS           0x4               app/libapp.a(main.o)
+ac                  0x14              app/libapp.a(main.o)
+BfMM_Min            0x8               app/libapp.a(ADCS.o)
+SSQ2                0x18              app/libapp.a(ADCS.o)
+CMD_MTY_PWM         0x1               app/libapp.a(ADCS.o)
+SHARE_CAN           0x4               app/libapp.a(main.o)
+tlmMCU1MMSTs        0x2               app/libapp.a(ADCS_TTC.o)
+SK2                 0x60              app/libapp.a(ADCS.o)
+MW_CmdRPSY          0x8               app/libapp.a(ADCS.o)
+Task3               0x8000            app/libapp.a(main.o)
+MM                  0x18              app/libapp.a(ADCS.o)
+msq                 0x28              app/libapp.a(main.o)
+LogOpen             0x2               app/libapp.a(ADCS.o)
+CMD_Adc_G2          0x4               app/libapp.a(ADCS.o)
+EIS_data_down2      0xc8              app/libapp.a(hdlc_handle.o)
+seconds80           0x4               app/libapp.a(ADCS.o)
+Task7               0x8000            app/libapp.a(main.o)
+CMD_MTY_TIME        0x1               app/libapp.a(ADCS.o)
+BreakPointPack      0x2               app/libapp.a(hdlc_handle.o)
+P3                  0x48              app/libapp.a(ADCS.o)
+ERR_SHARE_SENDDOWN  0x1               app/libapp.a(main.o)
+LXF_sun             0x18              app/libapp.a(ADCS.o)
+HP                  0x80              app/libapp.a(ADCS.o)
+tlmMCU2Vref         0x2               app/libapp.a(ADCS_TTC.o)
+RPY                 0x18              app/libapp.a(ADCS.o)
+OSRdyTbl            0x8               ucos-ii/source/libucos.a(os_core.o)
+tcMW_kpY            0x2               app/libapp.a(ADCS.o)
+MT_Xmax             0x8               app/libapp.a(ADCS.o)
+gd_data             0x3c              bsp/lib8260.a(commproc.o)
+TlmCANOnOff         0x2               app/libapp.a(ADCS.o)
+dBeta0              0x8               app/libapp.a(ADCS.o)
+timerirq_counter    0x4               app/libapp.a(main.o)
+Q1                  0x18              app/libapp.a(ADCS.o)
+Q_oi                0x20              app/libapp.a(ADCS.o)
+Task11              0x8000            app/libapp.a(main.o)
+tlmMCU1N12VMon      0x2               app/libapp.a(ADCS_TTC.o)
+ZPF_OSQ             0x4               app/libapp.a(main.o)
+tlmMCU1MM1Ts        0x2               app/libapp.a(ADCS_TTC.o)
+m_S                 0x1               app/libapp.a(ADCS_TTC.o)
+LockTime            0x1               app/libapp.a(main.o)
+Data_Beta           0x8               app/libapp.a(ADCS.o)
+zpf_N               0x18              app/libapp.a(ADCS.o)
+OSTmrTaskStk        0x200             ucos-ii/source/libucos.a(os_core.o)
+tlmMCU2MM2y         0x2               app/libapp.a(ADCS_TTC.o)
+SW                  0x18              app/libapp.a(ADCS.o)
+BfMM_prev           0x20              app/libapp.a(ADCS.o)
+irq6_counter        0x4               app/libapp.a(main.o)
+Sm                  0x20              app/libapp.a(ADCS.o)
+tlmMCU1N12VIMon     0x2               app/libapp.a(ADCS_TTC.o)
+tlmMWRPMy           0x2               app/libapp.a(ADCS_TTC.o)
+DD                  0x8               app/libapp.a(ADCS.o)
+CMD_CFG_UPDATE      0x2               app/libapp.a(ADCS.o)
+BYLO_TMP            0x48              app/libapp.a(ADCS.o)
+OSEventFreeList     0x4               ucos-ii/source/libucos.a(os_core.o)
+mimu_buf            0x28              app/libapp.a(main.o)
+CAN_Q_REC_LOCK      0x4               app/libapp.a(main.o)
+StarAcceptCount     0x1               app/libapp.a(main.o)
+dQbo                0x20              app/libapp.a(ADCS.o)
+Task2               0x8000            app/libapp.a(main.o)
+ProConFlag          0x28              app/libapp.a(main.o)
+CAN_Q_GPSBAD        0x4               app/libapp.a(main.o)
+Data_Alpha          0x8               app/libapp.a(ADCS.o)
+LockFirst           0x1               app/libapp.a(main.o)
+tlmMCU1MT3IMon      0x2               app/libapp.a(ADCS_TTC.o)
+Task6               0x20000           app/libapp.a(main.o)
+tlmMCU2TsVref       0x2               app/libapp.a(ADCS_TTC.o)
+Filter_Init         0x4               app/libapp.a(ADCS.o)
+Pitch_Ref           0x4               app/libapp.a(ADCS.o)
+CMD_MCU1            0x1               app/libapp.a(ADCS.o)
+tlmMCU1ASSNy        0x2               app/libapp.a(ADCS_TTC.o)
+Wbo_real            0x18              app/libapp.a(ADCS.o)
+NumCount            0x4               app/libapp.a(ProgramContrl.o)
+adcsbuf2            0xc8              app/libapp.a(hdlc_handle.o)
+obctozpf2           0x2               app/libapp.a(ADCS.o)
+bd_0                0x30              bsp/lib8260.a(hdlc.o)
+obctozpf2c          0x1               app/libapp.a(ADCS.o)
+q0                  0x4               app/libapp.a(hdlc_handle.o)
+ERR_SHARE_CAN       0x1               app/libapp.a(main.o)
+pre_second          0x4               app/libapp.a(ADCS.o)
+CAN_Q_Rec_RF1       0x4               app/libapp.a(main.o)
+OSIntNesting        0x1               ucos-ii/source/libucos.a(os_core.o)
+tlmMCU1MM1y         0x2               app/libapp.a(ADCS_TTC.o)
+DOWN_REMOTE_DATA    0x4               app/libapp.a(main.o)
+stkpv               0x4               ucos-ii/core603e/lib603e.a(os_cpu_c.o)
+dX                  0x38              app/libapp.a(ADCS.o)
+MM_Tlm16Prev        0x18              app/libapp.a(ADCS.o)
+CMD_MMS_ERASE       0x1               app/libapp.a(ADCS.o)
+m_A                 0x1               app/libapp.a(ADCS_TTC.o)
+tlmMCU1P12VMon      0x2               app/libapp.a(ADCS_TTC.o)
+ctSem               0x4               app/libapp.a(main.o)
+SK3                 0x48              app/libapp.a(ADCS.o)
+CMD_CONTROL         0x2               app/libapp.a(ADCS.o)
+Task14              0x8000            app/libapp.a(main.o)
+OSTCBCur            0x4               ucos-ii/source/libucos.a(os_core.o)
+mimu_hdlc           0x28              app/libapp.a(main.o)
+CMD_MWY_RPM_RATING  0x2               app/libapp.a(ADCS.o)
+CMD_Adc_Kd_2        0x4               app/libapp.a(ADCS.o)
+Sm_V                0x20              app/libapp.a(ADCS.o)
+OSTmrTime           0x4               ucos-ii/source/libucos.a(os_core.o)
+SSP2                0x60              app/libapp.a(ADCS.o)
+SSP3                0x48              app/libapp.a(ADCS.o)
+pre_week            0x4               app/libapp.a(ADCS.o)
+Task21              0x8000            app/libapp.a(main.o)
+sendRecMsg          0x4               app/libapp.a(main.o)
+OSTime              0x4               ucos-ii/source/libucos.a(os_core.o)
+Ix                  0x8               app/libapp.a(ADCS.o)
+OSTmrSem            0x4               ucos-ii/source/libucos.a(os_core.o)
+OSTaskIdleStk       0x200             ucos-ii/source/libucos.a(os_core.o)
+ADCS_OnOff          0x4               app/libapp.a(ADCS.o)
+tlmMCU2MMS          0x2               app/libapp.a(ADCS_TTC.o)
+ACSQCOM             0x4               app/libapp.a(main.o)
+PCCount             0x1               app/libapp.a(main.o)
+CMD_Adc_G           0x4               app/libapp.a(ADCS.o)
+DTEST               0x80              app/libapp.a(ADCS.o)
+Wbo                 0x18              app/libapp.a(ADCS.o)
+MMCorrectX          0x2               app/libapp.a(ADCS.o)
+OSEventTbl          0x870             ucos-ii/source/libucos.a(os_core.o)
+mp                  0x64              app/libapp.a(main.o)
+obctozpf1c          0x1               app/libapp.a(ADCS.o)
+OSTCBTbl            0x7e8             ucos-ii/source/libucos.a(os_core.o)
+NoMMTlm_Counter     0x4               app/libapp.a(ADCS.o)
+u                   0x64              app/libapp.a(ADCS.o)
+NoLockTime          0x4               app/libapp.a(main.o)
+acsflcnts           0x4               app/libapp.a(hdlc_handle.o)
+H2                  0x40              app/libapp.a(ADCS.o)
+CMD_Adc_wy          0x4               app/libapp.a(ADCS.o)
+eis1                0xc8              app/libapp.a(main.o)
+MMtemp              0x18              app/libapp.a(ADCS.o)
+LaserEventQ         0x4               app/libapp.a(main.o)
+timeoutQEvent       0x4               app/libapp.a(main.o)
+tlmMCU1MM1z         0x2               app/libapp.a(ADCS_TTC.o)
+LXF_shade           0x4               app/libapp.a(ADCS.o)
+GpsOnOff            0x4               app/libapp.a(main.o)
+OSFlagFreeList      0x4               ucos-ii/source/libucos.a(os_core.o)
+tlmMCU2ASSTs        0x2               app/libapp.a(ADCS_TTC.o)
+OSStatRdy           0x1               ucos-ii/source/libucos.a(os_core.o)
+tlmMCU1ASSPy        0x2               app/libapp.a(ADCS_TTC.o)
+OSTCBPrioTbl        0x100             ucos-ii/source/libucos.a(os_core.o)
+tlmMCU1TsVref       0x2               app/libapp.a(ADCS_TTC.o)
+PCNodeEnd           0x1               app/libapp.a(hdlc_handle.o)
+H1                  0x60              app/libapp.a(ADCS.o)
+tlmMCU1P12VIMon     0x2               app/libapp.a(ADCS_TTC.o)
+tlmMCU1GYRO         0x2               app/libapp.a(ADCS_TTC.o)
+BDGPSBuf            0x28              app/libapp.a(main.o)
+Aoi_orbit           0x48              app/libapp.a(ADCS.o)
+PCNumCount          0x4               app/libapp.a(ProgramContrl.o)
+PCQFlag             0x4               app/libapp.a(main.o)
+FCC1_RcvBufferPool  0x3840            bsp/lib8260.a(hdlc.o)
+CMD_FILTER          0x2               app/libapp.a(ADCS.o)
+OSIdleCtrRun        0x4               ucos-ii/source/libucos.a(os_core.o)
+tlmMCU2N12VMon      0x2               app/libapp.a(ADCS_TTC.o)
+MW_RPS_Max          0x8               app/libapp.a(ADCS.o)
+Task16              0x8000            app/libapp.a(main.o)
+can_use_by_wod      0x1               app/libapp.a(main.o)
+CMD_MTZ_TIME        0x1               app/libapp.a(ADCS.o)
+X                   0x38              app/libapp.a(ADCS.o)
+acsgdcnts           0x4               app/libapp.a(hdlc_handle.o)
+shortdummy          0x2               app/libapp.a(ADCS.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x00000000                .=0x0
+                0x00000000                .=ALIGN(0x4)
+
+.init
+ *(.init*)
+
+.text           0x00000000    0x30d60
+ *(.text)
+ .text          0x00000000     0x1464 bsp/cpusetup.o
+                0x00000200                MachineCheck
+                0x00000c00                OSCtxSwHandle
+                0x00000100                bsp_Start
+                0x000013a4                OSStartHighRdy
+                0x00001330                enable_int
+                0x00001384                CPU_IntEn
+                0x000013f0                OSIntCtxSw
+                0x00000800                SystemManage
+                0x00000900                DecIntHan
+                0x00001360                readtime
+                0x00001368                readtimer32
+                0x00001314                int_disable
+                0x00000500                ExtIntHandle
+                0x00001370                CPU_IntDis
+                0x00001340                SetDecrementer
+ .text          0x00001464      0x11c bsp/lib8260.a(epic.o)
+                0x000014d4                register_irq
+                0x000014e8                BSP_ProcessorISR
+                0x00001468                epic_InitEPIC
+                0x00001534                EIE_Hdlr
+ .text          0x00001580     0x1474 ucos-ii/source/libucos.a(os_core.o)
+                0x0000171c                OSEventPendMulti
+                0x00001b98                OSIntEnter
+                0x000027e0                OS_TCBInit
+                0x00002178                OS_EventTaskRemove
+                0x00001580                OSEventNameGet
+                0x00001bc4                OSIntExit
+                0x0000250c                OS_MemCopy
+                0x00002538                OS_Sched
+                0x000021ac                OS_EventTaskRemoveMulti
+                0x000020d4                OS_EventTaskWaitMulti
+                0x000026a8                OS_TaskStat
+                0x000024e4                OS_MemClr
+                0x00001f84                OS_EventTaskRdy
+                0x00001cec                OSSchedUnlock
+                0x00001dcc                OSStatInit
+                0x00001f80                OS_Dummy
+                0x00001640                OSEventNameSet
+                0x00002964                OSSched_i
+                0x0000205c                OS_EventTaskWait
+                0x00002754                OS_TaskStatStkChk
+                0x00001d68                OSStart
+                0x00001e34                OSTimeTick
+                0x00001c90                OSSchedLock
+                0x00002618                OS_StrCopy
+                0x00001b48                OSInit
+                0x00002654                OS_StrLen
+                0x00001f78                OSVersion
+                0x000021f8                OS_EventWaitListInit
+                0x00002680                OS_TaskIdle
+ .text          0x000029f4      0xc68 ucos-ii/source/libucos.a(os_flag.o)
+                0x000031e4                OSFlagPendGetFlagsRdy
+                0x000029f4                OSFlagAccept
+                0x0000361c                OS_FlagUnlink
+                0x000034f8                OS_FlagInit
+                0x000033e0                OSFlagQuery
+                0x00003220                OSFlagPost
+                0x00002b3c                OSFlagCreate
+                0x00002be8                OSFlagDel
+                0x00002ef0                OSFlagPend
+                0x00002e18                OSFlagNameSet
+                0x00002d60                OSFlagNameGet
+ .text          0x0000365c      0x4a4 ucos-ii/source/libucos.a(os_mem.o)
+                0x00003a70                OS_MemInit
+                0x00003804                OSMemNameGet
+                0x00003774                OSMemGet
+                0x0000395c                OSMemPut
+                0x0000365c                OSMemCreate
+                0x000039e4                OSMemQuery
+                0x000038a0                OSMemNameSet
+ .text          0x00003b00      0xae0 ucos-ii/source/libucos.a(os_q.o)
+                0x00003e5c                OSQFlush
+                0x00003b00                OSQAccept
+                0x00004188                OSQPost
+                0x00003ec8                OSQPend
+                0x0000426c                OSQPostFront
+                0x00003bc4                OSQCreate
+                0x00004354                OSQPostOpt
+                0x00003cb8                OSQDel
+                0x00004090                OSQPendAbort
+                0x0000456c                OS_QInit
+                0x000044a4                OSQQuery
+ .text          0x000045e0      0xd50 ucos-ii/source/libucos.a(os_task.o)
+                0x000048fc                OSTaskCreateExt
+                0x00004804                OSTaskCreate
+                0x000045e0                OSTaskChangePrio
+                0x00004a18                OSTaskDel
+                0x00004df4                OSTaskNameSet
+                0x00004c3c                OSTaskDelReq
+                0x00004f00                OSTaskResume
+                0x00004d0c                OSTaskNameGet
+                0x00005020                OSTaskStkChk
+                0x00005238                OSTaskQuery
+                0x00005300                OS_TaskStkClr
+                0x00005120                OSTaskSuspend
+ .text          0x00005330      0xb70 ucos-ii/source/libucos.a(os_tmr.o)
+                0x00005a0c                OSTmrSignal
+                0x0000545c                OSTmrDel
+                0x00005608                OSTmrRemainGet
+                0x0000572c                OSTmrStateGet
+                0x00005ae8                OSTmr_Init
+                0x000057d8                OSTmrStart
+                0x000058b0                OSTmrStop
+                0x00005330                OSTmrCreate
+                0x00005530                OSTmrNameGet
+ .text          0x00005ea0        0x4 ucos-ii/source/libucos.a(os_dbg_r.o)
+                0x00005ea0                OSDebugInit
+ .text          0x00005ea4      0x75c ucos-ii/source/libucos.a(os_sem.o)
+                0x00006120                OSSemPend
+                0x00005ea4                OSSemAccept
+                0x00006298                OSSemPendAbort
+                0x00006584                OSSemPost_i
+                0x00006390                OSSemPost
+                0x00005f08                OSSemCreate
+                0x00006448                OSSemQuery
+                0x000064ec                OSSemSet
+                0x00005fa4                OSSemDel
+ .text          0x00006600      0x314 ucos-ii/source/libucos.a(os_time.o)
+                0x000068dc                OSTimeSet
+                0x00006600                OSTimeDly
+                0x00006690                OSTimeDlyHMSM
+                0x00006790                OSTimeDlyResume
+                0x000068a4                OSTimeGet
+ .text          0x00006914      0x280 ucos-ii/core603e/lib603e.a(os_cpu_c.o)
+                0x00006a14                OSTaskCreateHook
+                0x00006b54                OSTaskStatHook
+                0x00006a08                OSInitHookBegin
+                0x00006a18                OSTaskDelHook
+                0x000069e0                DelayNmsec
+                0x00006b1c                exception_handle
+                0x00006b58                OSTimeTickHook
+                0x00006a04                OSTCBInitHook
+                0x00006a98                INTOSTaskSwHook
+                0x00006930                OSTaskStkInit
+                0x00006b5c                OSVectSet
+                0x0000699c                DelayNusec
+                0x00006b18                DEC_TEST
+                0x00006a10                OSInitHookEnd
+                0x00006a1c                TOSTaskSwHook
+                0x00006a0c                OSTaskIdleHook
+ .text          0x00006b94      0xb78 app/libapp.a(main.o)
+                0x00006bcc                reset_8260_watchdog
+                0x00006e88                get_hdlc_channel
+                0x00006be8                startracker
+                0x00006eac                main
+                0x00006e44                pitirq_func
+                0x00006c18                PIT_TMCNT_init_func
+                0x00006c5c                timerirq_func
+                0x00006b94                ADCS_Serial_Select
+ .text          0x0000770c      0xe10 app/libapp.a(interface.o)
+                0x00007c34                console_serial_input
+                0x0000771c                changemux
+                0x000077a0                adcs_checksum
+                0x00007be0                rf1_serial_output
+                0x000078cc                gps_serial_input
+                0x00007b8c                rf1_serial_input
+                0x00007928                gps_serial_output
+                0x00007ae4                rf0_serial_input
+                0x00007984                mt_serial_input
+                0x000077dc                cj_serial_input
+                0x00007ca8                can_datagram_send
+                0x00007a3c                ttc_serial_input
+                0x0000770c                delay
+                0x00007b38                rf0_serial_output
+                0x000080dc                DPRAM_IRQ
+                0x000079e0                mt_serial_output
+                0x00007838                cj_serial_output
+                0x00007a90                ttc_serial_output
+                0x00007c88                console_serial_output
+ .text          0x0000851c     0x2b38 app/libapp.a(hdlc_handle.o)
+                0x00009efc                PCNodeArrange
+                0x00008794                get_HDLC_rec_channel
+                0x00009b88                add_ProgramComNode
+                0x00008d68                send_down_frame
+                0x000085d4                dispatch
+                0x00008ba0                HJMSend_down_frame
+                0x00008f30                send_down_frame_2
+                0x00008830                HDLC_receive
+                0x0000a040                hdlc_send_2
+                0x00009030                timer_isr
+                0x00009f98                del_ProgramComNode
+                0x00009184                Transceiver
+                0x0000851c                toFloat_2
+ .text          0x0000b054      0x520 app/libapp.a(wod.o)
+                0x0000b054                wod
+ .text          0x0000b574    0x13d84 app/libapp.a(ADCS.o)
+                0x0000bba4                M_Transpose
+                0x0000bf8c                M_Inverse4x4
+                0x0001b6f0                ADCS_Control
+                0x0001253c                MM_MalTLM
+                0x0000f214                Qtn2RPY
+                0x0000ed2c                Angle_Normaliser
+                0x00019be8                Cmd_Limiter
+                0x0000bc28                M_Inverse3x3
+                0x00017158                SunFilter
+                0x0001dd7c                WriteTlmData
+                0x00016468                PitchFilter
+                0x0001ef08                ByteToShort
+                0x0001aad0                TC_Actuator
+                0x000128fc                mgps2mjd
+                0x0000ba24                M_Product
+                0x0001ef34                ByteToFloat
+                0x000155f0                RateFilter
+                0x000167ac                OakFilter
+                0x00014558                igrf_b_field
+                0x0000c670                M_Inverse5x5
+                0x0000ea70                Q_Normaliser
+                0x0001efb0                ADCS_Main
+                0x0001bcbc                ADCS_LoadCfgFile
+                0x00019e60                MT_Controller
+                0x0001a60c                YW_Controller
+                0x0000f44c                X_prop
+                0x0000b8d4                FPF
+                0x0000ebf8                P_Normaliser
+                0x0000ed84                xBYLO
+                0x00013e7c                eclipse
+                0x00015328                NoFilter
+                0x0001aea8                ADCS_Models
+                0x0001d5dc                CmdDisposal
+                0x000127b4                BF_Measured
+                0x0000b5ec                Q_Product
+                0x00013b4c                Sun
+                0x0000b574                Q_Inverse
+                0x0001401c                Orbit
+                0x0001b85c                ADCS_Initialise
+                0x00019b28                dBeta_Filter
+                0x0001ac30                SUN_Predicted
+                0x0001ef5c                ByteToDouble
+                0x00012a44                Sgp
+                0x0001eaac                TLM_MCUData
+                0x0001cc00                ADCS_CfgUpdate
+                0x0000bb34                M_Add
+                0x00014d60                BF_Predicted
+                0x0001aff0                ADCS_Filter
+                0x0001d210                ADCS_AutoRunning
+                0x000100c4                P_prop
+                0x000199d4                MT_FiringEffect
+                0x0000f304                RPY2Qtn
+                0x0000ea10                Sign
+ .text          0x0001f2f8      0xa2c app/libapp.a(ADCS_TTC.o)
+                0x0001f590                TLM_MWRPMy
+                0x0001fa8c                TLM_MCU2Whole
+                0x0001f370                TC_MWPIy
+                0x0001f6e8                TLM_MCU1Whole
+                0x0001f688                TLM_ADopen
+                0x0001f4b4                TC_MCU2MTPWM
+                0x0001f3dc                TC_MCU2MTCTL1
+                0x0001f2f8                TC_MWRPMy
+ .text          0x0001fd24      0xbe8 app/libapp.a(DLL_MIMU_RF.o)
+                0x0001ff04                RF_Main
+                0x0001fd24                DLL_Main
+ .text          0x0002090c      0x5c8 app/libapp.a(gps.o)
+                0x00020b04                gps_serial_scc3
+                0x0002090c                GetGpsData
+ .text          0x00020ed4      0x138 app/libapp.a(LockLS.o)
+                0x00020ed4                Lock
+ .text          0x0002100c     0x17c8 app/libapp.a(ProgramContrl.o)
+                0x000224e4                GetBDData
+                0x00021b9c                RF
+                0x00022440                RS422_Data_Send
+                0x0002100c                ProgramControl
+                0x00021850                ProgramControlUart
+ .text          0x000227d4      0x360 app/libapp.a(Starsensor.o)
+                0x000227d4                StarSensorTask
+ .text          0x00022b34       0xa4 app/libapp.a(MEMSGyro.o)
+                0x00022b34                MEMSGyro_Main
+ .text          0x00022bd8      0x648 app/libapp.a(BDGPS.o)
+                0x00022e74                BDGPS_Main
+                0x00022bd8                GetBDGpsData
+ .text          0x00023220      0x350 bsp/lib8260.a(commproc.o)
+                0x000232f4                get_clocks
+                0x00023278                m8260_cpm_reset
+                0x00023430                m8260_cpm_hostalloc
+                0x00023250                cpu_reboot
+                0x00023508                m8260_cpm_extcbrg
+                0x00023390                m8260_cpm_dpalloc
+                0x00023220                memset
+                0x00023450                m8260_cpm_setbrg
+                0x000234a8                m8260_cpm_fastbrg
+ .text          0x00023570      0x218 bsp/lib8260.a(smc1.o)
+                0x0002373c                smc1_serial_getc
+                0x000236f8                smc1_serial_puts
+                0x0002368c                smc1_serial_setbrg
+                0x000236c0                smc1_serial_putc
+                0x0002376c                smc1_serial_tstc
+                0x00023570                smc1_serial_init
+ .text          0x00023788      0x22c bsp/lib8260.a(smc2.o)
+                0x000238ac                smc2_serial_setbrg
+                0x0002391c                smc2_serial_puts
+                0x000238e0                smc2_serial_putc
+                0x00023960                smc2_serial_getc
+                0x00023788                smc2_serial_init
+                0x00023994                smc2_serial_tstc
+ .text          0x000239b4      0x2b0 bsp/lib8260.a(serial_scc.o)
+                0x00023b2c                serial_setbrg
+                0x00023c44                serial_tstc
+                0x00023b5c                serial_putc
+                0x000239b4                serial_init
+                0x00023bcc                serial_puts
+                0x00023c10                serial_getc
+ .text          0x00023c64      0x2b0 bsp/lib8260.a(scc4.o)
+                0x00023e7c                scc4_serial_puts
+                0x00023e0c                scc4_serial_putc
+                0x00023ec0                scc4_serial_getc
+                0x00023ef4                scc4_serial_tstc
+                0x00023c94                scc4_serial_init
+                0x00023c64                scc4_serial_setbrg
+ .text          0x00023f14      0x274 bsp/lib8260.a(scc3.o)
+                0x00023f14                scc3_serial_setbrg
+                0x000240f0                scc3_serial_puts
+                0x00024168                scc3_serial_tstc
+                0x00023f3c                scc3_serial_init
+                0x000240b4                scc3_serial_putc
+                0x00024134                scc3_serial_getc
+ .text          0x00024188      0x274 bsp/lib8260.a(scc2.o)
+                0x000241b0                scc2_serial_init
+                0x000243dc                scc2_serial_tstc
+                0x00024364                scc2_serial_puts
+                0x000243a8                scc2_serial_getc
+                0x00024188                scc2_serial_setbrg
+                0x00024328                scc2_serial_putc
+ .text          0x000243fc      0xa40 bsp/lib8260.a(hdlc.o)
+                0x00024af8                fcc1_hdlc_send_data
+                0x00024dc4                hdlc_fcc3_reset
+                0x00024940                fcc3_hdlc_rx
+                0x00024cc0                hdlc_app_init
+                0x000245bc                FCC1HInit
+                0x00024bdc                fcc3_hdlc_send_data
+                0x00024a40                fcc1_hdlc_interrupt
+                0x00024784                kkk
+                0x00024d4c                hdlc_fcc1_reset
+                0x00024578                InitParallelPorts
+                0x00024470                InitBDs
+                0x00024858                fcc1_hdlc_rx
+                0x000243fc                LoadTxBuffers
+                0x00024a98                fcc3_hdlc_interrupt
+                0x0002478c                hdlc_init
+ .text          0x00024e3c       0x70 bsp/lib8260.a(uart_print.o)
+                0x00024e3c                printf
+ .text          0x00024eac      0xa5c bsp/lib8260.a(vsprintf.o)
+                0x00025318                vsprintf
+                0x0002500c                simple_strtol
+                0x00024eac                strnlen
+                0x000258ac                sprintf
+                0x00024eec                simple_strtoul
+ .text          0x00025908      0x760 ucos-ii/source/libucos.a(os_mbox.o)
+                0x00025fc4                OSMboxQuery
+                0x00025e08                OSMboxPost
+                0x00025d10                OSMboxPendAbort
+                0x00025960                OSMboxCreate
+                0x00025b7c                OSMboxPend
+                0x00025908                OSMboxAccept
+                0x00025ecc                OSMboxPostOpt
+                0x00025a00                OSMboxDel
+ .text          0x00026068       0x54 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(w_acos.o)
+                0x00026068                acos
+ .text          0x000260bc       0x54 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(w_asin.o)
+                0x000260bc                asin
+ .text          0x00026110       0x64 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(w_atan2.o)
+                0x00026110                atan2
+ .text          0x00026174       0x64 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(w_fmod.o)
+                0x00026174                fmod
+ .text          0x000261d8       0x64 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(w_pow.o)
+                0x000261d8                pow
+ .text          0x0002623c       0x54 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(w_sqrt.o)
+                0x0002623c                sqrt
+ .text          0x00026290      0x8f0 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_atan.o)
+                0x00026290                atan
+ .text          0x00026b80      0x1f4 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_cos.o)
+                0x00026b80                cos
+ .text          0x00026d74       0x44 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_fabs.o)
+                0x00026d74                fabs
+ .text          0x00026db8      0x348 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_floor.o)
+                0x00026db8                floor
+ .text          0x00027100      0x1f8 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_sin.o)
+                0x00027100                sin
+ .text          0x000272f8      0x460 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(k_cos.o)
+                0x000272f8                __kernel_cos
+ .text          0x00027758      0x39c /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(k_sin.o)
+                0x00027758                __kernel_sin
+ .text          0x00027af4      0xd38 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_acos.o)
+                0x00027af4                __ieee754_acos
+ .text          0x0002882c      0xb9c /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_asin.o)
+                0x0002882c                __ieee754_asin
+ .text          0x000293c8      0x834 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_atan2.o)
+                0x000293c8                __ieee754_atan2
+ .text          0x00029bfc      0x7b8 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_fmod.o)
+                0x00029bfc                __ieee754_fmod
+ .text          0x0002a3b4     0x1cac /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_pow.o)
+                0x0002a3b4                __ieee754_pow
+ .text          0x0002c060      0xb18 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_rem_pio2.o)
+                0x0002c060                __ieee754_rem_pio2
+ .text          0x0002cb78      0x690 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_sqrt.o)
+                0x0002cb78                __ieee754_sqrt
+ .text          0x0002d208      0x31c /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_scalbn.o)
+                0x0002d208                scalbn
+ .text          0x0002d524     0x1398 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(k_rem_pio2.o)
+                0x0002d524                __kernel_rem_pio2
+ .text          0x0002e8bc       0x58 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_copysign.o)
+                0x0002e8bc                copysign
+ .text          0x0002e914     0x1534 /LinuxPPC/CDK/powerpc-linux/lib/gcc-lib/powerpc-linux/2.95.2//libgcc.a(dp-bit.o)
+                0x0002f85c                __cmpdf2
+                0x0002f8c8                __eqdf2
+                0x0002f9c0                __gtdf2
+                0x0002fd94                __make_dp
+                0x0002fbb0                __floatsidf
+                0x0002fab8                __ltdf2
+                0x0002eaf8                __unpack_d
+                0x0002ef8c                __adddf3
+                0x0002fc94                __fixdfsi
+                0x0002fb34                __ledf2
+                0x0002f708                __fpcmp_parts_d
+                0x0002fd48                __negdf2
+                0x0002f4c4                __divdf3
+                0x0002f084                __muldf3
+                0x0002fdcc                __truncdfsf2
+                0x0002f944                __nedf2
+                0x0002fa3c                __gedf2
+                0x0002f000                __subdf3
+                0x0002e914                __pack_d
+ .text          0x0002fe48      0xed8 /LinuxPPC/CDK/powerpc-linux/lib/gcc-lib/powerpc-linux/2.95.2//libgcc.a(fp-bit.o)
+                0x00030544                __divsf3
+                0x00030ba4                __fixsfsi
+                0x00030c98                __make_fp
+                0x000302bc                __subsf3
+                0x00030a78                __lesf2
+                0x00030ccc                __extendsfdf2
+                0x000308a8                __nesf2
+                0x0002ff30                __unpack_f
+                0x0003091c                __gtsf2
+                0x0002fe48                __pack_f
+                0x00030aec                __floatsisf
+                0x00030834                __eqsf2
+                0x00030c50                __negsf2
+                0x000307d0                __cmpsf2
+                0x00030a04                __ltsf2
+                0x00030338                __mulsf3
+                0x00030990                __gesf2
+                0x000306bc                __fpcmp_parts_f
+                0x00030250                __addsf3
+ .text          0x00030d20       0x40 /LinuxPPC/CDK/powerpc-linux/lib/gcc-lib/powerpc-linux/2.95.2//libgcc.a(_lshrdi3.o)
+                0x00030d20                __lshrdi3
+
+.rodata         0x00030d60      0xa98
+ .rodata        0x00030d60      0x150 ucos-ii/source/libucos.a(os_core.o)
+                0x00030d60                OSUnMapTbl
+ .rodata        0x00030eb0       0x28 ucos-ii/source/libucos.a(os_tmr.o)
+ .rodata        0x00030ed8       0xe4 ucos-ii/core603e/lib603e.a(os_cpu_c.o)
+ *fill*         0x00030fbc        0x4
+ .rodata        0x00030fc0      0x160 app/libapp.a(hdlc_handle.o)
+ .rodata        0x00031120      0x108 app/libapp.a(ADCS.o)
+ .rodata        0x00031228        0x9 app/libapp.a(DLL_MIMU_RF.o)
+ *fill*         0x00031231        0x3
+ .rodata        0x00031234       0x14 app/libapp.a(LockLS.o)
+ .rodata        0x00031248        0xf app/libapp.a(ProgramContrl.o)
+ .rodata        0x00031257       0x1b app/libapp.a(Starsensor.o)
+ .rodata        0x00031272        0x6 app/libapp.a(BDGPS.o)
+ .rodata        0x00031278       0xb8 bsp/lib8260.a(commproc.o)
+ .rodata        0x00031330       0x24 bsp/lib8260.a(hdlc.o)
+ *fill*         0x00031354        0x4
+ .rodata        0x00031358      0x1f0 bsp/lib8260.a(vsprintf.o)
+ .rodata        0x00031548       0x98 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_atan.o)
+ .rodata        0x000315e0       0x10 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_fmod.o)
+ .rodata        0x000315f0       0x30 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_pow.o)
+ .rodata        0x00031620      0x188 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_rem_pio2.o)
+ .rodata        0x000317a8       0x50 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(k_rem_pio2.o)
+                0x000317f8                .=ALIGN(0x4)
+
+.sdata2         0x000317f8        0x0
+ *(.sdata2)
+                0x000317f8                .=ALIGN(0x4)
+
+.data           0x000317f8      0x4a4
+ *(.data)
+ .data          0x000317f8       0x10 app/libapp.a(main.o)
+                0x000317f8                startrack
+ .data          0x00031808       0x28 app/libapp.a(ADCS.o)
+                0x00031808                Test
+ .data          0x00031830      0x13c app/libapp.a(ProgramContrl.o)
+                0x00031850                StarON
+                0x000318d0                ADCSON
+                0x00031830                StarOFF
+                0x0003193c                MCU2_Cycle
+                0x00031948                GYRO_OFF
+                0x000318b0                ADCSOFF
+                0x00031890                MEMSGryoON
+                0x00031960                GYRO_Telemitry
+                0x000318f0                MWON
+                0x00031954                GYRO_ON
+                0x00031910                MWOFF
+                0x00031870                MEMSGryoOFF
+                0x00031930                RF_Take_To_OBC
+ .data          0x0003196c      0x200 bsp/lib8260.a(commproc.o)
+                0x0003196c                corecnf_tab
+ .data          0x00031b6c        0x8 bsp/lib8260.a(smc1.o)
+ .data          0x00031b74        0x8 bsp/lib8260.a(smc2.o)
+ .data          0x00031b7c      0x100 bsp/lib8260.a(vsprintf.o)
+                0x00031b7c                _ctype
+ .data          0x00031c7c       0x20 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_pow.o)
+
+.got2           0x00031c9c       0x18
+ .got2          0x00031c9c        0xc /LinuxPPC/CDK/powerpc-linux/lib/gcc-lib/powerpc-linux/2.95.2//libgcc.a(dp-bit.o)
+ .got2          0x00031ca8        0xc /LinuxPPC/CDK/powerpc-linux/lib/gcc-lib/powerpc-linux/2.95.2//libgcc.a(fp-bit.o)
+                0x00031cb4                .=ALIGN(0x4)
+
+.sdata          0x00031cb8      0x428
+ *(.sdata)
+ .sdata         0x00031cb8        0x4 ucos-ii/source/libucos.a(os_core.o)
+ .sdata         0x00031cbc       0x74 ucos-ii/source/libucos.a(os_dbg_r.o)
+                0x00031d06                OSTaskNameSize
+                0x00031cde                OSMboxEn
+                0x00031cee                OSQEn
+                0x00031d2c                OSDataSize
+                0x00031d24                OSTmrSize
+                0x00031d2a                OSTmrWheelTblSize
+                0x00031cca                OSEventSize
+                0x00031d0a                OSTaskStatStkSize
+                0x00031cf4                OSRdyTblSize
+                0x00031cd8                OSFlagMax
+                0x00031d12                OSTCBSize
+                0x00031cf8                OSStkWidth
+                0x00031cec                OSPtrSize
+                0x00031ccc                OSEventTblSize
+                0x00031cf0                OSQMax
+                0x00031cd0                OSFlagEn
+                0x00031d16                OSTimeTickHookEn
+                0x00031cda                OSFlagNameSize
+                0x00031cf2                OSQSize
+                0x00031cdc                OSLowestPrio
+                0x00031d22                OSTmrCfgTicksPerSec
+                0x00031cc4                OSEventEn
+                0x00031d1e                OSTmrCfgNameSize
+                0x00031d00                OSTaskIdleStkSize
+                0x00031d14                OSTicksPerSec
+                0x00031d18                OSVersionNbr
+                0x00031cc0                OSEndiannessTest
+                0x00031cd2                OSFlagGrpSize
+                0x00031cc6                OSEventMax
+                0x00031cfc                OSTaskCreateExtEn
+                0x00031cf6                OSSemEn
+                0x00031d08                OSTaskStatEn
+                0x00031ce2                OSMemMax
+                0x00031cbc                OSDebugEn
+                0x00031cd4                OSFlagNodeSize
+                0x00031d1c                OSTmrCfgMax
+                0x00031d04                OSTaskMax
+                0x00031d28                OSTmrWheelSize
+                0x00031cfe                OSTaskDelEn
+                0x00031cce                OSEventMultiEn
+                0x00031d1a                OSTmrEn
+                0x00031ce4                OSMemNameSize
+                0x00031d10                OSTCBPrioTblMax
+                0x00031d0c                OSTaskStatStkChkEn
+                0x00031ce0                OSMemEn
+                0x00031cea                OSMutexEn
+                0x00031ce6                OSMemSize
+                0x00031ce8                OSMemTblSize
+                0x00031d02                OSTaskProfileEn
+                0x00031cc8                OSEventNameSize
+                0x00031d0e                OSTaskSwHookEn
+                0x00031cd6                OSFlagWidth
+                0x00031d20                OSTmrCfgWheelSize
+                0x00031cfa                OSTaskCreateEn
+                0x00031d26                OSTmrTblSize
+ .sdata         0x00031d30        0xc ucos-ii/core603e/lib603e.a(os_cpu_c.o)
+ .sdata         0x00031d3c        0x3 app/libapp.a(main.o)
+                0x00031d3d                WODFlag
+                0x00031d3c                LockTTCFlag
+ *fill*         0x00031d3f        0x1
+ .sdata         0x00031d40       0x14 app/libapp.a(hdlc_handle.o)
+                0x00031d4a                stop_id
+                0x00031d44                acs_down_buf
+                0x00031d48                STATE
+                0x00031d4c                MAX_TICK
+                0x00031d40                acsaddr
+ *fill*         0x00031d54        0x4
+ .sdata         0x00031d58        0x8 app/libapp.a(ADCS.o)
+                0x00031d58                NUM
+ .sdata         0x00031d60       0x18 app/libapp.a(ADCS_TTC.o)
+                0x00031d66                tcMW_kiy
+                0x00031d6a                tcMCU2SampleMode
+                0x00031d76                tcMCU2MTPWMz
+                0x00031d6c                tcMCU2MT_CTLx
+                0x00031d68                tcMCU1SampleMode
+                0x00031d70                tcMCU2MT_CTLz
+                0x00031d6e                tcMCU2MT_CTLy
+                0x00031d64                tcMW_kpy
+                0x00031d74                tcMCU2MTPWMy
+                0x00031d60                tcMWRPMy
+                0x00031d62                tcMWRPMyDr
+                0x00031d72                tcMCU2MTPWMx
+ .sdata         0x00031d78        0x8 app/libapp.a(DLL_MIMU_RF.o)
+                0x00031d78                err_fault
+ .sdata         0x00031d80       0x28 app/libapp.a(ProgramContrl.o)
+                0x00031d98                RF_Photograph
+                0x00031da0                addr
+                0x00031da4                all_photolen
+                0x00031d88                BDGPSOFF
+                0x00031d90                RF_Telemitry
+                0x00031d80                BDGPSON
+ .sdata         0x00031da8       0x18 bsp/lib8260.a(hdlc.o)
+                0x00031da8                fcc1_cur_tx
+                0x00031daa                fcc1_cur_rx
+                0x00031db4                fcc3_rx_packets
+                0x00031dad                globle_bd_num_1
+                0x00031dab                fcc3_cur_rx
+                0x00031dbc                fcc3_tx_packets
+                0x00031da9                fcc3_cur_tx
+                0x00031db8                fcc1_tx_packets
+                0x00031dac                globle_bd_num_0
+                0x00031db0                fcc1_rx_packets
+ .sdata         0x00031dc0       0x10 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_atan.o)
+ .sdata         0x00031dd0        0x8 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_floor.o)
+ .sdata         0x00031dd8       0x38 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(k_cos.o)
+ .sdata         0x00031e10       0x38 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(k_sin.o)
+ .sdata         0x00031e48       0x70 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_acos.o)
+ .sdata         0x00031eb8       0x78 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_asin.o)
+ .sdata         0x00031f30       0x30 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_atan2.o)
+ .sdata         0x00031f60        0x8 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_fmod.o)
+ .sdata         0x00031f68       0xd8 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_pow.o)
+ .sdata         0x00032040       0x50 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_rem_pio2.o)
+ .sdata         0x00032090       0x10 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_sqrt.o)
+ .sdata         0x000320a0       0x20 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_scalbn.o)
+ .sdata         0x000320c0       0x20 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(k_rem_pio2.o)
+                0x000320e0                .=ALIGN(0x4)
+                0x00033000                .=ALIGN(0x1000)
+                0x000320e0                __init_begin=.
+
+.text.init
+ *(.text.init)
+
+.data.init
+ *(.data.init)
+                0x00033000                .=ALIGN(0x1000)
+                0x000320e0                __init_end=.
+                0x000320e0                .=ALIGN(0x4)
+                0x000320e0                __bss_start=.
+
+.sbss           0x00033000      0x51c
+ *(.sbss)
+ .sbss          0x00033000        0xc bsp/lib8260.a(epic.o)
+                                  0x4 (size before relaxing)
+                0x00033004                ipic
+                0x00033008                ptr_gd
+ .sbss          0x0003300c       0x70 ucos-ii/source/libucos.a(os_core.o)
+                                  0x0 (size before relaxing)
+                0x0003300c                OSTmrFreeList
+                0x00033010                OSLockNesting
+                0x00033014                OSTmrSemSignal
+                0x00033018                OSRunning
+                0x0003301c                OSIdleCtr
+                0x00033020                OSTmrUsed
+                0x00033022                OSPrioHighRdy
+                0x00033023                OSPrioCur
+                0x00033024                OSTCBList
+                0x00033028                OSTickStepState
+                0x0003302c                OSCtxSwCtr
+                0x00033030                OSTmrFree
+                0x00033034                OSIdleCtrMax
+                0x00033038                OSTCBFreeList
+                0x0003303c                OSCPUUsage
+                0x0003303d                OSTaskCtr
+                0x00033040                OSMemFreeList
+                0x00033044                OSTCBHighRdy
+                0x00033048                OSQFreeList
+                0x0003304c                OSRdyGrp
+                0x00033050                OSRdyTbl
+                0x00033058                OSEventFreeList
+                0x0003305c                OSIntNesting
+                0x00033060                OSTCBCur
+                0x00033064                OSTmrTime
+                0x00033068                OSTime
+                0x0003306c                OSTmrSem
+                0x00033070                OSFlagFreeList
+                0x00033074                OSStatRdy
+                0x00033078                OSIdleCtrRun
+ .sbss          0x0003307c        0x8 ucos-ii/core603e/lib603e.a(os_cpu_c.o)
+                                  0x0 (size before relaxing)
+                0x0003307c                msrvalue
+                0x00033080                stkpv
+ .sbss          0x00033084      0x13d app/libapp.a(main.o)
+                                 0x18 (size before relaxing)
+                0x0003309c                PCFlag
+                0x000330a4                CAN_Q_Rec_DLL
+                0x000330a8                PC_UQ
+                0x000330ac                PCFsecond
+                0x000330b0                can_use_by_dll
+                0x000330b1                ERR_SHARE_PRINTF
+                0x000330b4                CAN_Q_Rec
+                0x000330b8                PCSsecond
+                0x000330bc                CAN_Q_REC_TTC
+                0x000330c0                DLL_HDLC_REC
+                0x000330c4                eis_transf_flag
+                0x000330c6                PCFweek
+                0x000330c8                GpsReady
+                0x000330cc                MEMSGyroQ
+                0x000330d0                PC_Cycle
+                0x000330d4                TaskManageQueue
+                0x000330d8                TTC_Flag
+                0x000330dc                ADCS_FLAG
+                0x000330e0                StarFlag
+                0x000330e4                CAN_Q_REC_EIS
+                0x000330e8                timer_counter
+                0x000330ec                BDGPSQ
+                0x000330f0                CAN_Q_Rec_MIMU
+                0x000330f4                can_use_by_mimu
+                0x000330f6                PCSweek
+                0x000330f8                HDLC_channel_select
+                0x000330fc                wod_cycle
+                0x00033100                gps_getQ
+                0x00033104                SS_OSQ
+                0x00033108                HdlcQEvent
+                0x0003310c                Lock_Q_TTC
+                0x00033110                sendMsg
+                0x00033114                ZPF_FLAG
+                0x00033118                gps_week
+                0x0003311c                ADCS_HDLC_REC
+                0x00033120                EIS1_photographQ
+                0x00033124                RFS_HDLC_REC
+                0x00033128                CAN_Q_REC_GPS
+                0x0003312c                PC_Q
+                0x00033130                RS422_Q_Rec
+                0x00033134                SHARE_PRINTF
+                0x00033138                OSTaskStarting
+                0x0003313c                SHARE_SENDDOWN
+                0x00033140                SEND_TIMEOUT
+                0x00033144                RecMsg
+                0x00033148                gb
+                0x0003314c                sendQEvent
+                0x00033150                EIS0_photographQ
+                0x00033154                MIMU_HDLC_REC
+                0x00033158                gps_second
+                0x0003315c                SEND_STOP
+                0x00033160                transeiver_receiveQ
+                0x00033164                CAN_Q_Rec2
+                0x00033168                CAN_Q_GPS
+                0x0003316c                SHARE_CAN
+                0x00033170                ERR_SHARE_SENDDOWN
+                0x00033174                timerirq_counter
+                0x00033178                ZPF_OSQ
+                0x0003317c                LockTime
+                0x00033180                irq6_counter
+                0x00033184                CAN_Q_REC_LOCK
+                0x00033188                StarAcceptCount
+                0x0003318c                CAN_Q_GPSBAD
+                0x00033190                LockFirst
+                0x00033191                ERR_SHARE_CAN
+                0x00033194                CAN_Q_Rec_RF1
+                0x00033198                DOWN_REMOTE_DATA
+                0x0003319c                ctSem
+                0x000331a0                sendRecMsg
+                0x000331a4                ACSQCOM
+                0x000331a8                PCCount
+                0x000331ac                NoLockTime
+                0x000331b0                LaserEventQ
+                0x000331b4                timeoutQEvent
+                0x000331b8                GpsOnOff
+                0x000331bc                PCQFlag
+                0x000331c0                can_use_by_wod
+ *fill*         0x000331c1        0x3
+ .sbss          0x000331c4        0x8 app/libapp.a(interface.o)
+ .sbss          0x000331cc       0x40 app/libapp.a(hdlc_handle.o)
+                                  0x0 (size before relaxing)
+                0x000331cc                RR_TIMEOUT
+                0x000331d4                head_node
+                0x000331d8                wod_begin
+                0x000331dc                q2
+                0x000331e0                ACSFL_Flag
+                0x000331e4                PCNodePointer
+                0x000331e8                BreakWodBegin
+                0x000331ec                ACSGD_Flag
+                0x000331f0                q3
+                0x000331f4                q1
+                0x000331f8                BreakPointPack
+                0x000331fc                q0
+                0x00033200                acsflcnts
+                0x00033204                PCNodeEnd
+                0x00033208                acsgdcnts
+ *fill*         0x0003320c        0x4
+ .sbss          0x00033210      0x274 app/libapp.a(ADCS.o)
+                                  0x0 (size before relaxing)
+                0x00033210                gps_seconds_ADCS
+                0x00033218                GG
+                0x00033220                CMD_Adc_Ks1
+                0x00033224                MW_RPMCmd16
+                0x00033228                P_counter
+                0x0003322c                utc
+                0x00033230                TlmSource
+                0x00033234                NoMMTlm
+                0x00033238                CMD_Adc_Kdw
+                0x0003323c                gps_sign
+                0x00033240                BfMM_Max
+                0x00033248                W0
+                0x00033250                CMD_Adc_Kp_1
+                0x00033254                CMD_OCO_UPDATE
+                0x00033256                MMCorrectZ
+                0x00033258                obctozpflong
+                0x0003325c                obctozpf4c
+                0x0003325e                Control
+                0x00033260                CMD_MWY_CONTROL_MODE
+                0x00033264                ZKC_Counter
+                0x00033268                MW_RPS
+                0x00033270                CMD_LOG_ONOFF
+                0x00033278                MW_temp
+                0x00033280                Mjd
+                0x00033288                MT_Ymax
+                0x00033290                J_MW
+                0x00033298                Sb
+                0x000332a0                CMD_Adc_W_step
+                0x000332a4                Period_
+                0x000332a8                CMD_MTZ_PWM
+                0x000332a9                CMD_MCU2
+                0x000332aa                CMD_MM_SEL
+                0x000332ac                obctozpf6c
+                0x000332b0                CMD_Adc_Kd_1
+                0x000332b4                CMD_Adc_Kp_0
+                0x000332b8                CMD_MT_I_SAMPLE
+                0x000332c0                MW_RPM_Max
+                0x000332c8                CMD_MT_CONTROL_MODE
+                0x000332d0                Rate_prev
+                0x000332d8                ADCS_Err
+                0x000332e0                Iz
+                0x000332e8                MW_RPMTlm16
+                0x000332f0                dBeta
+                0x000332f8                CMD_MWY_ON_OFF
+                0x000332fc                CMD_Adc_TStep
+                0x00033300                MW_RPM_Rating
+                0x00033308                CMD_Adc_G1
+                0x0003330c                MMCorrectY
+                0x0003330e                CMD_MWY_RPM_MAX
+                0x00033310                obctozpfdouble
+                0x00033318                MT_PWMCmd16
+                0x0003331e                CMD_MTX_PWM
+                0x00033320                Beta_prev
+                0x00033328                Period_Nom
+                0x0003332c                seconds80_Prev
+                0x00033330                MW_T_Max
+                0x00033338                CMD_Adc_Kd1
+                0x0003333c                CMD_MWX_RPM_MAX
+                0x00033340                CMD_Adc_PitchMask
+                0x00033344                CMD_MTX_TIME
+                0x00033348                dBeta2
+                0x00033350                obctozpf1
+                0x00033352                CMD_PERIOD_NOM
+                0x00033354                CMD_Adc_Kd_0
+                0x00033358                CMD_MWZ_RPM_MAX
+                0x0003335c                MW_statusY
+                0x00033360                Filter
+                0x00033364                gps_weeks_ADCS
+                0x00033368                CMD_PITCH_REF
+                0x00033370                dMW_RPS
+                0x00033378                WorkMode
+                0x0003337a                CMD_MWY_PERIOD
+                0x0003337c                obctozpf3
+                0x0003337e                CMD_Adc_Kpw
+                0x00033380                MW_RPS_Prev
+                0x00033388                MW_RPS_Rating
+                0x00033390                obctozpf3c
+                0x00033398                Iy
+                0x000333a0                obctozpf5c
+                0x000333a8                Period_True
+                0x000333b0                MT_Zmax
+                0x000333b8                doubledummy
+                0x000333c0                Filter_Sts
+                0x000333c8                BfMM_Min
+                0x000333d0                CMD_MTY_PWM
+                0x000333d8                MW_CmdRPSY
+                0x000333e0                LogOpen
+                0x000333e4                CMD_Adc_G2
+                0x000333e8                seconds80
+                0x000333ec                CMD_MTY_TIME
+                0x000333ee                tcMW_kpY
+                0x000333f0                MT_Xmax
+                0x000333f8                TlmCANOnOff
+                0x00033400                dBeta0
+                0x00033408                Data_Beta
+                0x00033410                DD
+                0x00033418                CMD_CFG_UPDATE
+                0x00033420                Data_Alpha
+                0x00033428                Filter_Init
+                0x0003342c                Pitch_Ref
+                0x00033430                CMD_MCU1
+                0x00033432                obctozpf2
+                0x00033434                obctozpf2c
+                0x00033438                pre_second
+                0x0003343c                CMD_MMS_ERASE
+                0x0003343e                CMD_CONTROL
+                0x00033440                CMD_MWY_RPM_RATING
+                0x00033444                CMD_Adc_Kd_2
+                0x00033448                pre_week
+                0x00033450                Ix
+                0x00033458                ADCS_OnOff
+                0x0003345c                CMD_Adc_G
+                0x00033460                MMCorrectX
+                0x00033462                obctozpf1c
+                0x00033464                NoMMTlm_Counter
+                0x00033468                CMD_Adc_wy
+                0x0003346c                LXF_shade
+                0x00033470                CMD_FILTER
+                0x00033478                MW_RPS_Max
+                0x00033480                CMD_MTZ_TIME
+                0x00033482                shortdummy
+ .sbss          0x00033484       0x74 app/libapp.a(ADCS_TTC.o)
+                                  0x0 (size before relaxing)
+                0x00033484                tlmMWRPMyDr
+                0x00033486                tlmMCU2P12VMon
+                0x00033488                tlmMCU2ASSNy
+                0x0003348a                tlmMCU1MM1x
+                0x0003348c                tlmMCU2ASSPy
+                0x0003348e                tlmMWyAnri
+                0x00033490                tlmMCU2MT2IMon
+                0x00033492                m_C
+                0x00033494                tlmMCU2P5VIMon
+                0x00033496                tlmMCU2MM2x
+                0x00033498                tlmMCU2MT1IMon
+                0x0003349a                tlmMCU2MTVref
+                0x0003349c                tlmMCU1MT2IMon
+                0x0003349e                tlmMCU2MT3IMon
+                0x000334a0                m_U16Tmp
+                0x000334a2                tlmMWyAnti
+                0x000334a4                tlmMCU2GYRO
+                0x000334a6                tlmMCU1MTVref
+                0x000334a8                tlmMCU1MT1IMon
+                0x000334aa                tlmMCU1ASSTs
+                0x000334ac                tlmMCU1MMS
+                0x000334ae                tlmMCU1P5VMon
+                0x000334b0                tlmMCU2ASSPx
+                0x000334b2                tlmMCU2MM2Ts
+                0x000334b4                tlmMCU1Vref
+                0x000334b6                m_err
+                0x000334b8                tlmMCU1ASSNx
+                0x000334ba                tlmMWyAnt
+                0x000334bc                tlmMCU2MM2z
+                0x000334be                tlmMCU2ASSNx
+                0x000334c0                tlmMCU2P5VMon
+                0x000334c2                tlmMCU2MMSTs
+                0x000334c4                tlmMCU2P12VIMon
+                0x000334c6                tlmMCU1P5VIMon
+                0x000334c8                tlmMCU2N12VIMon
+                0x000334ca                tlmMCU1ASSPx
+                0x000334cc                tlmMCU1MMSTs
+                0x000334ce                tlmMCU2Vref
+                0x000334d0                tlmMCU1N12VMon
+                0x000334d2                tlmMCU1MM1Ts
+                0x000334d4                m_S
+                0x000334d6                tlmMCU2MM2y
+                0x000334d8                tlmMCU1N12VIMon
+                0x000334da                tlmMWRPMy
+                0x000334dc                tlmMCU1MT3IMon
+                0x000334de                tlmMCU2TsVref
+                0x000334e0                tlmMCU1ASSNy
+                0x000334e2                tlmMCU1MM1y
+                0x000334e4                m_A
+                0x000334e6                tlmMCU1P12VMon
+                0x000334e8                tlmMCU2MMS
+                0x000334ea                tlmMCU1MM1z
+                0x000334ec                tlmMCU2ASSTs
+                0x000334ee                tlmMCU1ASSPy
+                0x000334f0                tlmMCU1TsVref
+                0x000334f2                tlmMCU1P12VIMon
+                0x000334f4                tlmMCU1GYRO
+                0x000334f6                tlmMCU2N12VMon
+ .sbss          0x000334f8        0xc app/libapp.a(ProgramContrl.o)
+                                  0x0 (size before relaxing)
+                0x000334f8                EquId
+                0x000334fc                NumCount
+                0x00033500                PCNumCount
+ .sbss          0x00033504        0x4 bsp/lib8260.a(commproc.o)
+                                  0x0 (size before relaxing)
+                0x00033504                hid0
+ .sbss          0x00033508       0x14 bsp/lib8260.a(hdlc.o)
+                                  0x0 (size before relaxing)
+                0x00033508                RxTxBD
+                0x0003350c                IMM
+                0x00033510                pFifo_Rx0
+                0x00033514                pFifo_Rx1
+                0x00033518                Hdlc_Flag
+
+.dynbss
+ *(.dynbss)
+
+.bss            0x00033520   0x10c410
+ *(.bss)
+ .bss           0x00033520     0x8000 app/libapp.a(main.o)
+ .bss           0x0003b520     0x1174 app/libapp.a(interface.o)
+ *fill*         0x0003c694        0x4
+ .bss           0x0003c698       0x18 /LinuxPPC/CDK/powerpc-linux/lib/gcc-lib/powerpc-linux/2.95.2//libgcc.a(dp-bit.o)
+ .bss           0x0003c6b0       0x10 /LinuxPPC/CDK/powerpc-linux/lib/gcc-lib/powerpc-linux/2.95.2//libgcc.a(fp-bit.o)
+ COMMON         0x0003c6c0      0x100 bsp/lib8260.a(epic.o)
+                                  0x0 (size before relaxing)
+                0x0003c6c0                BSP_IPIC_Handlers
+ COMMON         0x0003c7c0     0x217c ucos-ii/source/libucos.a(os_core.o)
+                                  0x0 (size before relaxing)
+                0x0003c7c0                OSTmrWheelTbl
+                0x0003c800                OSFlagTbl
+                0x0003ca30                OSTmrTbl
+                0x0003cd70                OSMemTbl
+                0x0003ce24                OSTaskStatStk
+                0x0003d024                OSQTbl
+                0x0003d3e4                OSTmrTaskStk
+                0x0003d5e4                OSTaskIdleStk
+                0x0003d7e4                OSEventTbl
+                0x0003e054                OSTCBTbl
+                0x0003e83c                OSTCBPrioTbl
+ COMMON         0x0003e93c    0xf0954 app/libapp.a(main.o)
+                                  0x0 (size before relaxing)
+                0x0003e93c                ad
+                0x0003e9a0                Task13
+                0x000469a0                gps
+                0x000469c8                ProConUart
+                0x000469f0                me
+                0x00046ab8                rfs
+                0x00046ae0                acsq
+                0x00046b08                Task4
+                0x00066b08                zpf
+                0x00066b30                mse
+                0x00066b58                Task19
+                0x0006eb58                Task15
+                0x00076b58                dll_buf
+                0x00076b80                cg
+                0x00076b94                Task8
+                0x0007eb94                Task20
+                0x00086b94                MEMSGyroBuf
+                0x00086bbc                ms
+                0x00086be4                eis0
+                0x00086cac                Task17
+                0x0008ecac                Task10
+                0x00096cac                uart_down
+                0x00096d10                dll_hdlc
+                0x00096d38                Task12
+                0x0009ed38                Task9
+                0x000a6d38                cang
+                0x000a6d60                task_queue
+                0x000a6d88                don
+                0x000a6dec                Task1
+                0x000aedec                can_buf
+                0x000aee14                tr
+                0x000aeedc                rf_can
+                0x000aef04                lo
+                0x000aef18                ct
+                0x000aef2c                stars
+                0x000aef54                ProCon
+                0x000aef7c                ce
+                0x000aef90                sbuf
+                0x000aefac                to
+                0x000aefd4                Task18
+                0x000b6fd4                can_buf2
+                0x000b6ffc                rs422
+                0x000b7060                Task5
+                0x000d7060                laserM
+                0x000d7088                ac
+                0x000d709c                Task3
+                0x000df09c                msq
+                0x000df0c4                Task7
+                0x000e70c4                Task11
+                0x000ef0c4                mimu_buf
+                0x000ef0ec                Task2
+                0x000f70ec                ProConFlag
+                0x000f7114                Task6
+                0x00117114                Task14
+                0x0011f114                mimu_hdlc
+                0x0011f13c                Task21
+                0x0012713c                mp
+                0x001271a0                eis1
+                0x00127268                BDGPSBuf
+                0x00127290                Task16
+ COMMON         0x0012f290     0x1068 app/libapp.a(hdlc_handle.o)
+                                  0x0 (size before relaxing)
+                0x0012f290                timer
+                0x0012f2c0                dkc_package_confile
+                0x0012f3bc                PCNodeArray
+                0x0012fb8c                EIS_data_down1
+                0x0012fc54                adcsbuf1
+                0x00130168                EIS_data_down2
+                0x00130230                adcsbuf2
+ COMMON         0x001302f8     0x10a0 app/libapp.a(ADCS.o)
+                                  0x0 (size before relaxing)
+                0x001302f8                RPY_ST
+                0x00130310                Sun_i
+                0x00130328                SK4
+                0x00130370                Q2
+                0x00130388                Wbo_ST
+                0x001303a0                Test1
+                0x001303b8                P1
+                0x00130438                SJ_SS_Q
+                0x00130458                SR1
+                0x00130470                K
+                0x00130518                BfMM
+                0x00130538                SSP1
+                0x001305b8                Pre_SRPY
+                0x001305d0                BfLO
+                0x001305f0                P2
+                0x00130650                Y
+                0x00130660                SK1
+                0x001306c0                Adc
+                0x00130700                C_pred
+                0x00130718                V_ECI
+                0x00130728                SS
+                0x00130748                SX
+                0x00130780                BYLO
+                0x001307c8                TEST2
+                0x001307e0                Qbo_prev
+                0x00130800                SRPY
+                0x00130818                SStemp
+                0x00130838                P0
+                0x00130868                data_got
+                0x00130880                MM_Tlm16
+                0x00130898                R1
+                0x001308b0                MT_Cmd
+                0x001308c8                Eph
+                0x00130978                R_ECEF
+                0x00130988                TEST3
+                0x001309a0                BfLO_prev
+                0x001309c0                O
+                0x001309d8                TESTK
+                0x00130aa0                ModGH
+                0x00130d30                SUN_V
+                0x00130d50                SSQ2
+                0x00130d68                SK2
+                0x00130dc8                MM
+                0x00130de0                P3
+                0x00130e28                LXF_sun
+                0x00130e40                HP
+                0x00130ec0                RPY
+                0x00130ed8                Q1
+                0x00130ef0                Q_oi
+                0x00130f10                zpf_N
+                0x00130f28                SW
+                0x00130f40                BfMM_prev
+                0x00130f60                Sm
+                0x00130f80                BYLO_TMP
+                0x00130fc8                dQbo
+                0x00130fe8                Wbo_real
+                0x00131000                dX
+                0x00131038                MM_Tlm16Prev
+                0x00131050                SK3
+                0x00131098                Sm_V
+                0x001310b8                SSP2
+                0x00131118                SSP3
+                0x00131160                DTEST
+                0x001311e0                Wbo
+                0x001311f8                u
+                0x00131260                H2
+                0x001312a0                MMtemp
+                0x001312b8                H1
+                0x00131318                Aoi_orbit
+                0x00131360                X
+ COMMON         0x00131398      0x258 app/libapp.a(gps.o)
+                                  0x0 (size before relaxing)
+                0x00131398                RScc3Buf
+                0x001314c4                WScc3Buf
+ COMMON         0x001315f0       0xa0 app/libapp.a(ProgramContrl.o)
+                                  0x0 (size before relaxing)
+                0x001315f0                BDGPSbuf
+ COMMON         0x00131690       0xa0 app/libapp.a(BDGPS.o)
+                                  0x0 (size before relaxing)
+                0x00131690                scc3buf
+ COMMON         0x00131730       0x3c bsp/lib8260.a(commproc.o)
+                                  0x0 (size before relaxing)
+                0x00131730                gd_data
+ *fill*         0x0013176c        0x4
+ COMMON         0x00131770     0xe1c0 bsp/lib8260.a(hdlc.o)
+                                  0x0 (size before relaxing)
+                0x00131770                FCC3_RcvBufferPool
+                0x00134fb0                receivedDataArray0
+                0x00134fe0                FCC1_SndBufferPool
+                0x00138820                bd_1
+                0x00138850                receivedDataArray1
+                0x00138880                FCC3_SndBufferPool
+                0x0013c0c0                bd_0
+                0x0013c0f0                FCC1_RcvBufferPool
+                0x0013f930                .=ALIGN(0x4)
+                0x0013f930                _end=.
+                0x00033000                Sbase=__bss_start
+                0x0013f930                Send=_end
+Address of section .text set to 0x0
+LOAD bsp/cpusetup.o
+LOAD bsp/lib8260.a
+LOAD ucos-ii/source/libucos.a
+LOAD ucos-ii/core603e/lib603e.a
+LOAD /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a
+LOAD app/libapp.a
+LOAD bsp/lib8260.a
+LOAD ucos-ii/source/libucos.a
+LOAD ucos-ii/core603e/lib603e.a
+LOAD /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a
+LOAD app/libapp.a
+LOAD /LinuxPPC/CDK/powerpc-linux/lib/gcc-lib/powerpc-linux/2.95.2//libgcc.a
+OUTPUT(ppcboot elf32-powerpc)
+
+.comment        0x0013f930      0x90e
+ .comment       0x0013f930       0x26 bsp/lib8260.a(epic.o)
+ .comment       0x0013f956       0x26 ucos-ii/source/libucos.a(os_core.o)
+ .comment       0x0013f97c       0x26 ucos-ii/source/libucos.a(os_flag.o)
+ .comment       0x0013f9a2       0x26 ucos-ii/source/libucos.a(os_mem.o)
+ .comment       0x0013f9c8       0x26 ucos-ii/source/libucos.a(os_q.o)
+ .comment       0x0013f9ee       0x26 ucos-ii/source/libucos.a(os_task.o)
+ .comment       0x0013fa14       0x26 ucos-ii/source/libucos.a(os_tmr.o)
+ .comment       0x0013fa3a       0x26 ucos-ii/source/libucos.a(os_dbg_r.o)
+ .comment       0x0013fa60       0x26 ucos-ii/source/libucos.a(os_sem.o)
+ .comment       0x0013fa86       0x26 ucos-ii/source/libucos.a(os_time.o)
+ .comment       0x0013faac       0x26 ucos-ii/core603e/lib603e.a(os_cpu_c.o)
+ .comment       0x0013fad2       0x26 app/libapp.a(main.o)
+ .comment       0x0013faf8       0x26 app/libapp.a(interface.o)
+ .comment       0x0013fb1e       0x26 app/libapp.a(hdlc_handle.o)
+ .comment       0x0013fb44       0x26 app/libapp.a(wod.o)
+ .comment       0x0013fb6a       0x26 app/libapp.a(ADCS.o)
+ .comment       0x0013fb90       0x26 app/libapp.a(ADCS_TTC.o)
+ .comment       0x0013fbb6       0x26 app/libapp.a(DLL_MIMU_RF.o)
+ .comment       0x0013fbdc       0x26 app/libapp.a(gps.o)
+ .comment       0x0013fc02       0x26 app/libapp.a(LockLS.o)
+ .comment       0x0013fc28       0x26 app/libapp.a(ProgramContrl.o)
+ .comment       0x0013fc4e       0x26 app/libapp.a(Starsensor.o)
+ .comment       0x0013fc74       0x26 app/libapp.a(MEMSGyro.o)
+ .comment       0x0013fc9a       0x26 app/libapp.a(BDGPS.o)
+ .comment       0x0013fcc0       0x26 bsp/lib8260.a(commproc.o)
+ .comment       0x0013fce6       0x26 bsp/lib8260.a(smc1.o)
+ .comment       0x0013fd0c       0x26 bsp/lib8260.a(smc2.o)
+ .comment       0x0013fd32       0x26 bsp/lib8260.a(serial_scc.o)
+ .comment       0x0013fd58       0x26 bsp/lib8260.a(scc4.o)
+ .comment       0x0013fd7e       0x26 bsp/lib8260.a(scc3.o)
+ .comment       0x0013fda4       0x26 bsp/lib8260.a(scc2.o)
+ .comment       0x0013fdca       0x26 bsp/lib8260.a(hdlc.o)
+ .comment       0x0013fdf0       0x26 bsp/lib8260.a(uart_print.o)
+ .comment       0x0013fe16       0x26 bsp/lib8260.a(vsprintf.o)
+ .comment       0x0013fe3c       0x26 ucos-ii/source/libucos.a(os_mbox.o)
+ .comment       0x0013fe62       0x26 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(w_acos.o)
+ .comment       0x0013fe88       0x26 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(w_asin.o)
+ .comment       0x0013feae       0x26 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(w_atan2.o)
+ .comment       0x0013fed4       0x26 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(w_fmod.o)
+ .comment       0x0013fefa       0x26 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(w_pow.o)
+ .comment       0x0013ff20       0x26 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(w_sqrt.o)
+ .comment       0x0013ff46       0x26 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_atan.o)
+ .comment       0x0013ff6c       0x26 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_cos.o)
+ .comment       0x0013ff92       0x26 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_fabs.o)
+ .comment       0x0013ffb8       0x26 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_floor.o)
+ .comment       0x0013ffde       0x26 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_sin.o)
+ .comment       0x00140004       0x26 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(k_cos.o)
+ .comment       0x0014002a       0x26 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(k_sin.o)
+ .comment       0x00140050       0x26 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_acos.o)
+ .comment       0x00140076       0x26 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_asin.o)
+ .comment       0x0014009c       0x26 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_atan2.o)
+ .comment       0x001400c2       0x26 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_fmod.o)
+ .comment       0x001400e8       0x26 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_pow.o)
+ .comment       0x0014010e       0x26 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_rem_pio2.o)
+ .comment       0x00140134       0x26 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(e_sqrt.o)
+ .comment       0x0014015a       0x26 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_scalbn.o)
+ .comment       0x00140180       0x26 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(k_rem_pio2.o)
+ .comment       0x001401a6       0x26 /home/wangxiaochu2010/ucosjiubanzi/fdlibm/libm.a(s_copysign.o)
+ .comment       0x001401cc       0x26 /LinuxPPC/CDK/powerpc-linux/lib/gcc-lib/powerpc-linux/2.95.2//libgcc.a(dp-bit.o)
+ .comment       0x001401f2       0x26 /LinuxPPC/CDK/powerpc-linux/lib/gcc-lib/powerpc-linux/2.95.2//libgcc.a(fp-bit.o)
+ .comment       0x00140218       0x26 /LinuxPPC/CDK/powerpc-linux/lib/gcc-lib/powerpc-linux/2.95.2//libgcc.a(_lshrdi3.o)
+
+.stab           0x0013f930      0xef4
+ .stab          0x0013f930      0x588 /LinuxPPC/CDK/powerpc-linux/lib/gcc-lib/powerpc-linux/2.95.2//libgcc.a(dp-bit.o)
+ .stab          0x0013feb8      0x57c /LinuxPPC/CDK/powerpc-linux/lib/gcc-lib/powerpc-linux/2.95.2//libgcc.a(fp-bit.o)
+                                0x588 (size before relaxing)
+ .stab          0x00140434      0x3f0 /LinuxPPC/CDK/powerpc-linux/lib/gcc-lib/powerpc-linux/2.95.2//libgcc.a(_lshrdi3.o)
+                                0x3fc (size before relaxing)
+
+.stabstr        0x0013f930     0x1939
+ .stabstr       0x0013f930     0x1939 /LinuxPPC/CDK/powerpc-linux/lib/gcc-lib/powerpc-linux/2.95.2//libgcc.a(dp-bit.o)
+                                  0x0 (size before relaxing)

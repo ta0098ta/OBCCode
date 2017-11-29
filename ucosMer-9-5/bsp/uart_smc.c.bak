@@ -1,0 +1,325 @@
+#include "includes.h"
+#include <stdarg.h>
+
+#define CPM_CR_SMC1_PAGE        (0x07)
+#define CPM_CR_SMC2_PAGE        (0x08)
+#define CPM_CR_SMC1_SBLOCK      (0x08)
+#define CPM_CR_SMC2_SBLOCK      (0x09)
+
+
+/* CPM Command register.
+ * */
+#define CPM_CR_RST      ((uint)0x80000000)
+#define CPM_CR_PAGE     ((uint)0x7c000000)
+#define CPM_CR_SBLOCK   ((uint)0x03e00000)
+#define CPM_CR_FLG      ((uint)0x00010000)
+#define CPM_CR_MCN      ((uint)0x00003fc0)
+#define CPM_CR_OPCODE   ((uint)0x0000000f)
+
+/* SMC uart mode register (Internal memory map).
+ * */
+#define SMCMR_REN       ((ushort)0x0001)
+#define SMCMR_TEN       ((ushort)0x0002)
+#define SMCMR_DM        ((ushort)0x000c)
+#define SMCMR_SM_GCI    ((ushort)0x0000)
+#define SMCMR_SM_UART   ((ushort)0x0020)
+#define SMCMR_SM_TRANS  ((ushort)0x0030)
+#define SMCMR_SM_MASK   ((ushort)0x0030)
+#define SMCMR_PM_EVEN   ((ushort)0x0100)        /* Even parity, else odd */
+#define SMCMR_REVD      SMCMR_PM_EVEN
+#define SMCMR_PEN       ((ushort)0x0200)        /* Parity enable */
+#define SMCMR_BS        SMCMR_PEN
+#define SMCMR_SL        ((ushort)0x0400)        /* Two stops, else one */
+#define SMCR_CLEN_MASK  ((ushort)0x7800)        /* Character length */
+/* Some opcodes (there are more...later)
+ * */
+#define CPM_CR_INIT_TRX         ((ushort)0x0000)
+#define CPM_CR_INIT_RX          ((ushort)0x0001)
+#define CPM_CR_INIT_TX          ((ushort)0x0002)
+#define CPM_CR_HUNT_MODE        ((ushort)0x0003)
+#define CPM_CR_STOP_TX          ((ushort)0x0004)
+#define CPM_CR_RESTART_TX       ((ushort)0x0006)
+#define CPM_CR_SET_GADDR        ((ushort)0x0008)
+
+#define mk_cr_cmd(PG, SBC, MCN, OP) \
+	        ((PG << 26) | (SBC << 21) | (MCN << 6) | OP)
+#define smcr_mk_clen(C) (((C) << 11) & SMCR_CLEN_MASK)
+
+/* SMC Event and Mask register.
+ * */
+#define SMCM_TXE        ((unsigned char)0x10)
+#define SMCM_BSY        ((unsigned char)0x04)
+#define SMCM_TX         ((unsigned char)0x02)
+#define SMCM_RX         ((unsigned char)0x01)
+
+
+#define BD_SC_EMPTY     ((ushort)0x8000)        /* Recieve is empty */
+#define BD_SC_READY     ((ushort)0x8000)        /* Transmit is ready */
+#define BD_SC_WRAP      ((ushort)0x2000)        /* Last buffer descriptor */
+#define BD_SC_INTRPT    ((ushort)0x1000)        /* Interrupt on change */
+#define BD_SC_LAST      ((ushort)0x0800)        /* Last buffer in frame */
+#define BD_SC_CM        ((ushort)0x0200)        /* Continous mode */
+#define BD_SC_ID        ((ushort)0x0100)        /* Rec'd too many idles */
+#define BD_SC_P         ((ushort)0x0100)        /* xmt preamble */
+#define BD_SC_BR        ((ushort)0x0020)        /* Break received */
+#define BD_SC_FR        ((ushort)0x0010)        /* Framing error */
+#define BD_SC_PR        ((ushort)0x0008)        /* Parity error */
+#define BD_SC_OV        ((ushort)0x0002)        /* Overrun */
+#define BD_SC_CD        ((ushort)0x0001)        /* ?? */
+
+/* Function code bits, usually generic to devices.
+ * */
+#define CPMFCR_GBL      ((u_char)0x20)  /* Set memory snooping */
+#define CPMFCR_EB       ((u_char)0x10)  /* Set big endian byte order */
+#define CPMFCR_TC2      ((u_char)0x04)  /* Transfer code 2 value */
+#define CPMFCR_DTB      ((u_char)0x02)  /* Use local bus for data when set */
+#define CPMFCR_BDB      ((u_char)0x01)  /* Use local bus for BD when set */
+
+typedef struct smc {            /* Serial management channels */
+	INT8S   res1[2];
+	INT16U  smc_smcmr;
+	INT8S   res2[2];
+	INT8U   smc_smce;
+	INT8S   res3[3];
+	INT8U   smc_smcm;
+	INT8S   res4[5];
+} smc_t;
+smc_t *im_smc;
+typedef struct comm_proc {
+	uint    cp_cpcr;
+	uint    cp_rccr;
+	char    res1[14];
+	ushort  cp_rter;
+	char    res2[2];
+	ushort  cp_rtmr;
+	ushort  cp_rtscr;
+	char    res3[2];
+	uint    cp_rtsr;
+	char    res4[12];
+} cpm8260_t;
+
+/* Define enough so I can at least use the serial port as a UART.
+ *  */
+typedef struct smc_uart {
+	INT16U  smc_rbase;      /* Rx Buffer descriptor base address */
+	INT16U  smc_tbase;      /* Tx Buffer descriptor base address */
+	INT8U   smc_rfcr;       /* Rx function code */
+	INT8U   smc_tfcr;       /* Tx function code */
+	INT16U  smc_mrblr;      /* Max receive buffer length */
+	INT32U  smc_rstate;     /* Internal */
+	INT32U  smc_idp;        /* Internal */
+	INT16U  smc_rbptr;      /* Internal */
+	INT16U  smc_ibc;        /* Internal */
+	INT32U  smc_rxtmp;      /* Internal */
+	INT32U  smc_tstate;     /* Internal */
+	INT32U  smc_tdp;        /* Internal */
+	INT16U  smc_tbptr;      /* Internal */
+	INT16U  smc_tbc;        /* Internal */
+	INT32U  smc_txtmp;      /* Internal */
+	INT16U  smc_maxidl;     /* Maximum idle characters */
+	INT16U  smc_tmpidl;     /* Temporary idle counter */
+	INT16U  smc_brklen;     /* Last received break length */
+	INT16U  smc_brkec;      /* rcv'd break condition counter */
+	INT16U  smc_brkcr;      /* xmt break count register */
+	INT16U  smc_rmask;      /* Temporary bit mask */
+	INT32U  smc_stmp;       /* SDMA Temp */
+} smc_uart_t;
+/* Buffer descriptors used by many of the CPM protocols.
+ * */
+typedef struct cpm_buf_desc {
+	INT16U  cbd_sc;         /* Status and Control */
+	INT16U  cbd_datlen;     /* Data length in buffer */
+	INT32U  cbd_bufaddr;    /* Buffer address in host memory */
+} cbd_t;
+
+void smc_init()
+{
+	uint    dpaddr;
+	volatile smc_t *sp;
+	volatile smc_uart_t *up;
+	volatile cbd_t *tbdf, *rbdf;
+	volatile cpm8260_t *cp = (cpm8260_t *)0xf00119c0; 
+	im_smc = (smc_t *)(0xf0011a80);
+	sp = im_smc;
+	*(unsigned short *)0xf00087fc = 0;	//smc point to dpram offset 0
+	up = (smc_uart_t *)0xf0000000;
+
+	/* Disable transmitter/receiver.
+	*/
+	sp->smc_smcmr &= ~(SMCMR_REN | SMCMR_TEN);
+
+
+	/* NOTE: I/O port pins are set up via the iop_conf_tab[] table */
+
+	/* Allocate space for two buffer descriptors in the DP ram.
+	 * damm: allocating space after the two buffers for rx/tx data
+	 */
+		
+	dpaddr = 0x80;//m8260_cpm_dpalloc((2 * sizeof (cbd_t)) + 2, 16);
+
+
+	/* Set the physical address of the host memory buffers in
+	 * the buffer descriptors.
+	 */
+	rbdf = (cbd_t *)0xf0000080;//&im->im_dprambase[dpaddr];
+	rbdf->cbd_bufaddr = (uint) (rbdf+2);
+	rbdf->cbd_sc = 0;
+	tbdf = rbdf + 1;
+	tbdf->cbd_bufaddr = ((uint) (rbdf+2)) + 1;
+	tbdf->cbd_sc = 0;
+
+	/* Set up the uart parameters in the parameter ram.
+	*/
+	up->smc_rbase = dpaddr;
+	up->smc_tbase = dpaddr+sizeof(cbd_t);
+	up->smc_rfcr = CPMFCR_EB;
+	up->smc_tfcr = CPMFCR_EB;
+	up->smc_brklen = 0;
+	up->smc_brkec = 0;
+	up->smc_brkcr = 0;
+
+	/* Set UART mode, 8 bit, no parity, one stop.
+	 * Enable receive and transmit.
+	 */
+	sp->smc_smcmr = smcr_mk_clen(9) |  SMCMR_SM_UART;
+
+	/* Mask all interrupts and remove anything pending.
+	*/
+	sp->smc_smcm = 0;
+	sp->smc_smce = 0xff;
+
+	/* put the SMC channel into NMSI (non multiplexd serial interface)
+	 * mode and wire either BRG7 to SMC1 or BRG8 to SMC2 (15-17).
+	 */
+	//im->im_cpmux.cmx_smr = (im->im_cpmux.cmx_smr&~CMXSMR_MASK)|CMXSMR_VALUE;
+
+	/* Set up the baud rate generator.
+	*/
+	//serial_setbrg ();
+
+	/* Make the first buffer the only buffer.
+	*/
+	tbdf->cbd_sc |= BD_SC_WRAP;
+	rbdf->cbd_sc |= BD_SC_EMPTY | BD_SC_WRAP;
+
+	/* Single character receive.
+	*/
+	up->smc_mrblr = 1;
+	up->smc_maxidl = 0;
+
+	/* Initialize Tx/Rx parameters.
+	*/
+	while (cp->cp_cpcr & CPM_CR_FLG)  /* wait if cp is busy */
+	  ;
+
+	cp->cp_cpcr = mk_cr_cmd(CPM_CR_SMC1_PAGE, CPM_CR_SMC1_SBLOCK,
+					0, CPM_CR_INIT_TRX) | CPM_CR_FLG;
+
+	while (cp->cp_cpcr & CPM_CR_FLG)  /* wait if cp is busy */
+	  ;
+	
+	/* Enable transmitter/receiver.
+	*/
+	sp->smc_smcmr |= SMCMR_REN | SMCMR_TEN;
+
+	//printf("dpaddr=0x%x,up=0x%x,rbdf=0x%x,tbdf=0x%x,sp=0x%x\n",dpaddr,up,rbdf,tbdf,sp);
+
+	//return (0);
+	
+}
+void
+serial_putc(const char c)
+{
+	volatile cbd_t		*tbdf;
+	volatile char		*buf;
+	volatile smc_uart_t	*up;
+        //volatile immap_t	*im = (immap_t *)CFG_IMMR;
+
+	if (c == '\n')
+		serial_putc ('\r');
+
+	//up = (smc_uart_t *)&(im->im_dprambase[PROFF_SMC]);
+	up = (smc_uart_t *)0xf0000000;
+
+	//tbdf = (cbd_t *)&im->im_dprambase[up->smc_tbase];
+	tbdf = (cbd_t *)(0xf0000000 + up->smc_tbase);
+
+	/* Wait for last character to go.
+	*/
+	buf = (char *)tbdf->cbd_bufaddr;
+	while (tbdf->cbd_sc & BD_SC_READY)
+		;
+
+	*buf = c;
+	tbdf->cbd_datlen = 1;
+	tbdf->cbd_sc |= BD_SC_READY;
+}
+
+void
+serial_puts (const char *s)
+{
+	while (*s) {
+		serial_putc (*s++);
+	}
+}
+
+#if 0
+int
+serial_getc(void)
+{
+	volatile cbd_t		*rbdf;
+	volatile unsigned char	*buf;
+	volatile smc_uart_t	*up;
+        volatile immap_t	*im = (immap_t *)CFG_IMMR;
+	unsigned char		c;
+
+	up = (smc_uart_t *)&(im->im_dprambase[PROFF_SMC]);
+
+	rbdf = (cbd_t *)&im->im_dprambase[up->smc_rbase];
+
+	/* Wait for character to show up.
+	*/
+	buf = (unsigned char *)rbdf->cbd_bufaddr;
+	while (rbdf->cbd_sc & BD_SC_EMPTY)
+		;
+	c = *buf;
+	rbdf->cbd_sc |= BD_SC_EMPTY;
+
+	return(c);
+}
+
+int
+serial_tstc()
+{
+	volatile cbd_t		*rbdf;
+	volatile smc_uart_t	*up;
+        volatile immap_t	*im = (immap_t *)CFG_IMMR;
+
+	up = (smc_uart_t *)&(im->im_dprambase[PROFF_SMC]);
+
+	rbdf = (cbd_t *)&im->im_dprambase[up->smc_rbase];
+
+	return(!(rbdf->cbd_sc & BD_SC_EMPTY));
+}
+#endif
+/* we use this so that we can do without the ctype library */
+#define is_digit(c)     ((c) >= '0' && (c) <= '9')
+
+void printf (const char *fmt, ...)
+{
+	va_list args;
+	uint i;
+	char printbuffer[256];
+
+	va_start (args, fmt);
+
+	/* For this to work, printbuffer must be larger than
+	 *          * anything we ever want to print.
+	 *                   */
+	i = vsprintf (printbuffer, fmt, args);
+	va_end (args);
+
+	/* Print the string */
+	serial_puts (printbuffer);
+}
+

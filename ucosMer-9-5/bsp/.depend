@@ -1,0 +1,135 @@
+cpusetup.o: cpusetup.S \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/ppc_asm.tmpl
+epic.o: epic.c includes.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu_def.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/app_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/os_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/core603e/os_cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/bsp.h
+decr.o: decr.c includes.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu_def.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/app_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/os_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/core603e/os_cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/bsp.h
+commproc.o: commproc.c \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/includes.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu_def.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/app_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/os_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/core603e/os_cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/bsp.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpm_8260.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/immap_8260.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/mpc8260.h
+serial_smc.o: serial_smc.c \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/includes.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu_def.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/app_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/os_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/core603e/os_cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/bsp.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/mpc8260.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpm_8260.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/immap_8260.h
+smc1.o: smc1.c /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/includes.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu_def.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/app_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/os_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/core603e/os_cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/bsp.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/mpc8260.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpm_8260.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/immap_8260.h
+smc2.o: smc2.c /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/includes.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu_def.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/app_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/os_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/core603e/os_cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/bsp.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/mpc8260.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpm_8260.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/immap_8260.h
+serial_scc.o: serial_scc.c \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/includes.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu_def.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/app_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/os_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/core603e/os_cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/bsp.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/mpc8260.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpm_8260.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/immap_8260.h
+scc4.o: scc4.c /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/includes.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu_def.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/app_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/os_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/core603e/os_cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/bsp.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/mpc8260.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpm_8260.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/immap_8260.h
+scc3.o: scc3.c /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/includes.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu_def.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/app_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/os_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/core603e/os_cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/bsp.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/mpc8260.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpm_8260.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/immap_8260.h
+scc2.o: scc2.c /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/includes.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu_def.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/app_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/os_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/core603e/os_cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/bsp.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/mpc8260.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpm_8260.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/immap_8260.h
+hdlc.o: hdlc.c /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/includes.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu_def.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/app_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/os_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/core603e/os_cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/bsp.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpm_8260.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/immap_8260.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/mpc8260.h masks8260.h
+vsprintf.o: vsprintf.c \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stdarg.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/va-ppc.h \
+ ctype.h
+uart_print.o: uart_print.c \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/includes.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/cpu_def.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/source/ucos_ii.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/app_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/app/os_cfg.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/ucos-ii/core603e/os_cpu.h \
+ /home/DKC/ucos/ZWJ-ucos/ucosMer-9-4+ADCS/bsp/bsp.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stdarg.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/va-ppc.h

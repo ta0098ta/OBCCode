@@ -1,0 +1,140 @@
+cpusetup.o: cpusetup.S /mnt/hgfs/work/TM/ucosTM/bsp/ppc_asm.tmpl
+epic.o: epic.c includes.h /mnt/hgfs/work/TM/ucosTM/bsp/cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpu_def.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/source/ucos_ii.h \
+ /mnt/hgfs/work/TM/ucosTM/app/app_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/app/os_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/core603e/os_cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/bsp.h
+decr.o: decr.c includes.h /mnt/hgfs/work/TM/ucosTM/bsp/cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpu_def.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/source/ucos_ii.h \
+ /mnt/hgfs/work/TM/ucosTM/app/app_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/app/os_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/core603e/os_cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/bsp.h
+commproc.o: commproc.c /mnt/hgfs/work/TM/ucosTM/bsp/includes.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpu_def.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/source/ucos_ii.h \
+ /mnt/hgfs/work/TM/ucosTM/app/app_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/app/os_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/core603e/os_cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/bsp.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpm_8260.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/immap_8260.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/mpc8260.h
+serial_smc.o: serial_smc.c /mnt/hgfs/work/TM/ucosTM/bsp/includes.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpu_def.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/source/ucos_ii.h \
+ /mnt/hgfs/work/TM/ucosTM/app/app_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/app/os_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/core603e/os_cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/bsp.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/mpc8260.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpm_8260.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/immap_8260.h
+smc1.o: smc1.c /mnt/hgfs/work/TM/ucosTM/bsp/includes.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpu_def.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/source/ucos_ii.h \
+ /mnt/hgfs/work/TM/ucosTM/app/app_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/app/os_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/core603e/os_cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/bsp.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/mpc8260.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpm_8260.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/immap_8260.h
+smc2.o: smc2.c /mnt/hgfs/work/TM/ucosTM/bsp/includes.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpu_def.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/source/ucos_ii.h \
+ /mnt/hgfs/work/TM/ucosTM/app/app_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/app/os_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/core603e/os_cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/bsp.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/mpc8260.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpm_8260.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/immap_8260.h
+serial_scc.o: serial_scc.c /mnt/hgfs/work/TM/ucosTM/bsp/includes.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpu_def.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/source/ucos_ii.h \
+ /mnt/hgfs/work/TM/ucosTM/app/app_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/app/os_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/core603e/os_cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/bsp.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/mpc8260.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpm_8260.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/immap_8260.h
+scc4.o: scc4.c /mnt/hgfs/work/TM/ucosTM/bsp/includes.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpu_def.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/source/ucos_ii.h \
+ /mnt/hgfs/work/TM/ucosTM/app/app_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/app/os_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/core603e/os_cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/bsp.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/mpc8260.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpm_8260.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/immap_8260.h
+scc3.o: scc3.c /mnt/hgfs/work/TM/ucosTM/bsp/includes.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpu_def.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/source/ucos_ii.h \
+ /mnt/hgfs/work/TM/ucosTM/app/app_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/app/os_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/core603e/os_cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/bsp.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/mpc8260.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpm_8260.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/immap_8260.h
+scc2.o: scc2.c /mnt/hgfs/work/TM/ucosTM/bsp/includes.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpu_def.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/source/ucos_ii.h \
+ /mnt/hgfs/work/TM/ucosTM/app/app_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/app/os_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/core603e/os_cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/bsp.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/mpc8260.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpm_8260.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/immap_8260.h
+vsprintf.o: vsprintf.c \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stdarg.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/va-ppc.h \
+ ctype.h
+uart_print.o: uart_print.c /mnt/hgfs/work/TM/ucosTM/bsp/includes.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpu_def.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/source/ucos_ii.h \
+ /mnt/hgfs/work/TM/ucosTM/app/app_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/app/os_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/core603e/os_cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/bsp.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/stdarg.h \
+ /LinuxPPC/CDK/lib/gcc-lib/powerpc-linux/2.95.2/include/va-ppc.h
+spi.o: spi.c /LinuxPPC/CDK/include/linux/ctype.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/includes.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpu_def.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/source/ucos_ii.h \
+ /mnt/hgfs/work/TM/ucosTM/app/app_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/app/os_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/core603e/os_cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/bsp.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/mpc8260.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpm_8260.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/immap_8260.h
+hdlc.o: hdlc.c /mnt/hgfs/work/TM/ucosTM/bsp/includes.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpu_def.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/source/ucos_ii.h \
+ /mnt/hgfs/work/TM/ucosTM/app/app_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/app/os_cfg.h \
+ /mnt/hgfs/work/TM/ucosTM/ucos-ii/core603e/os_cpu.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/bsp.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/cpm_8260.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/immap_8260.h \
+ /mnt/hgfs/work/TM/ucosTM/bsp/mpc8260.h masks8260.h

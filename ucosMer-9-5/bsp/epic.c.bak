@@ -1,0 +1,192 @@
+/*
+ * file: epic.c
+ *
+ * PowerPC 8240  interrupt controller support
+ * for UCOS-II
+ *
+ * Author: Ernie Price
+ * eprice@bitwise.net
+ *
+ */
+#include "includes.h"
+
+#define PRIO (--pri << 16)      // used by epic_InitEPIC
+
+typedef struct irqHandler_t
+{
+    INT32U arg;
+    void (*handler)(INT32U);
+} irqHandler_t;
+
+static irqHandler_t interruptHandlers[MAX_HANDLERS + 1];
+
+/* Interrupt Controller.
+ * */
+typedef struct interrupt_controller {
+	INT16U  ic_sicr;
+	INT8S   res1[2];
+	INT32U  ic_sivec;
+	INT32U  ic_sipnrh;
+	INT32U  ic_sipnrl;
+	INT32U  ic_siprr;
+	INT32U  ic_scprrh;
+	INT32U  ic_scprrl;
+	INT32U  ic_simrh;
+	INT32U  ic_simrl;
+	INT32U  ic_siexr;
+	INT8S   res2[88];
+} intctl8260_t;
+
+intctl8260_t * ipic;
+
+// End EPIC hardware structure
+
+/*
+    \brief Initializes the EPIC
+*/
+void epic_InitEPIC(void)
+{
+    INT32S  i, pri = 16;
+    ipic = (intctl8260_t *)0xf0010c00;
+    ipic->ic_sicr = 0;
+    ipic->ic_siprr = 0x0530b370;
+    ipic->ic_scprrh = 0x0530b370;
+    ipic->ic_scprrl = 0x0530b370;
+    //ipic->ic_simrl = 0x1e;
+    ipic->ic_simrh = 0x02000002;	//IRQ6 pit 
+    ipic->ic_simrl = 0x80000000;	//FCC1
+}
+
+#if 0
+/*
+    \brief Returns a pointer to the specified vector priority register
+*/
+static INT32U *GetAddrVPR(INT32U intLevel)
+{
+    if (intLevel < I2C)                            // irq0 - irq4
+        return &epicB->x.Irq[intLevel].IVPR;
+
+    if (intLevel < TMR0)                           // internal I2C, DMA, UART, etc
+        return &epicB->IDM[intLevel - I2C].IIVPR;
+
+    if (intLevel < MAX_HANDLERS)                   // timers
+        return &epicA->tmr[intLevel - TMR0].GTVPR;
+
+    return (INT32U*)0;                             // no such interrupt
+}
+
+
+/*
+    \brief Fetches the IRQ vector from the epic and invokes the handler
+*/
+void EIE_Hdlr(void)
+{
+    INT32U epicIntSrc;
+
+    epicIntSrc = epicC->IACK;           // fetch highest priority vector
+
+    if (epicIntSrc != MAX_HANDLERS)
+    {
+        irqHandler_t *hndlentry;
+        hndlentry = &interruptHandlers[epicIntSrc];
+        (*hndlentry->handler) (hndlentry->arg);
+    }
+    epicC->EOI = 0;
+}
+
+/*
+    \brief Enables the interrupt for the specified vector
+*/
+void epic_EnableInterrupt(INT32U vector)
+{
+    INT32U  *ptrVPR, value;
+    MSR_SAVE;
+
+    ptrVPR = GetAddrVPR(vector);
+    if (ptrVPR)
+    {
+        OS_ENTER_CRITICAL();
+
+        value  = RE_LONG(ptrVPR);
+        value |= vector;
+        value &= ~IMASK;
+        RE_LONG(ptrVPR) = value;
+        OS_EXIT_CRITICAL();
+    }
+}
+
+/*
+    \brief Disables the interrupt for the specified vector
+*/
+void epic_DisbleInterrupt(INT32U vector)
+{
+    INT32U *ptrVPR, value;
+    MSR_SAVE;
+
+    ptrVPR = GetAddrVPR(vector);
+    if (ptrVPR)
+    {
+        OS_ENTER_CRITICAL();
+        value  = RE_LONG(ptrVPR);
+        value |= IMASK;
+        RE_LONG(ptrVPR) = value;
+        OS_EXIT_CRITICAL();
+    }
+}
+
+/*
+    \brief Adds an IRQ handler and enables the interrupt for it
+*/
+void epic_AddHandler(
+    INT32U  id,             // Interrupt vector number
+    void    (*handler) (),  // Pointer to Interrupt Handler Function
+    INT32U  arg             // Argument to pass to the Handler
+)
+{
+    MSR_SAVE;
+
+    if (id >= MAX_HANDLERS)
+        return;
+
+    OS_ENTER_CRITICAL();
+
+    interruptHandlers[id].handler = handler;
+    interruptHandlers[id].arg     = arg;
+
+    epic_EnableInterrupt(id);
+    OS_EXIT_CRITICAL();
+}
+#endif
+/*
+INT32U readtimer32()
+{
+	    asm("
+			        mfspr       3, 268"
+				    );
+}
+*/
+void EIE_Hdlr(void)
+{
+	/*
+    INT32U epicIntSrc;
+
+    epicIntSrc = epicC->IACK;           // fetch highest priority vector
+
+    if (epicIntSrc != MAX_HANDLERS)
+    {
+        irqHandler_t *hndlentry;
+        hndlentry = &interruptHandlers[epicIntSrc];
+        (*hndlentry->handler) (hndlentry->arg);
+    }
+    epicC->EOI = 0;
+    */
+	*(volatile unsigned short *)0xf0010240 |= 0x80;
+	ipic->ic_sipnrh = 0x2;	//clear pit int flag 
+    	//SetDecrementer(1650000000);
+    	SetDecrementer(0x70000000);
+	OSTimeTick();
+	//*(volatile unsigned int *)0xb00000 += 0x1;
+}
+
+
+/* End of Source */

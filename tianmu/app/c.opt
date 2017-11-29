@@ -1,0 +1,3 @@
+-tPPCEN:simple -Xsmall-data=8 -Xalign-functions=32 -Xstmw-fast -Xbss-common-off
+-Xstruct-best-align=0 -Xlint=0x100 -Xansi -Xforce-declarations -D__DIAB -DPPC
+-O -g -Xunroll=0  -ei1546

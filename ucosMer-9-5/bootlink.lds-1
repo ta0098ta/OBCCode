@@ -1,0 +1,38 @@
+/* 
+ * file: ramlnk.dld
+ *
+ * Author: Ernie price
+ * eprice@bitwise.net
+ *
+ */
+
+SECTIONS
+{
+	/*
+	 * The first GROUP contains code and constant data.
+	 */
+
+	. = 0x900000;
+
+		.text (TEXT)	: {
+			*(.text)
+			*(.rdata)
+			*(.rodata)
+			*(.frame_info)
+			*(.init)
+			*(.fini)
+		}
+		__ETEXT = .;
+
+		.sdata2 	: { *(.sdata2) }   /* small CONST area */
+
+		.data 	: { *(.data) }
+
+		.sdata 	: { *(.sdata) }
+
+		.sbss 	: { *(.sbss) }
+		.bss  	: { *(.bss) }
+		__end_data = .;
+
+}
+
